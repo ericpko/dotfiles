@@ -1,4 +1,4 @@
-git clone --bare git@bitbucket.org:durdn/cfg.git $HOME/.cfg
+git clone --bare https://github.com/ericpko/dotfiles.git $HOME/.cfg
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
