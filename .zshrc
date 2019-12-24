@@ -19,6 +19,9 @@ LS_COLORS='no=00:fi=00:di=34:ow=34;40:ln=35:pi=30;44:so=35;44:do=35;44:bd=33;44:
 export LS_COLORS
 export CLICOLOR=1
 
+# Enable Vi mode
+#bindkey -v
+
 # Add some aliases
 alias bup='brew update && brew upgrade && brew cask upgrade && brew cleanup'
 
