@@ -1,3 +1,6 @@
+#!/usr/bin/env zsh
+# The above line adds the shebang. Others also work.
+
 # Load the pure promp
 autoload -U promptinit; promptinit
 prompt pure
