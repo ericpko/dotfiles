@@ -1,0 +1,5 @@
+[user]
+	name = Eric K
+	email = eric.koehli@mail.utoronto.ca
+[core]
+	editor = nvim
