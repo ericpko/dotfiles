@@ -3,6 +3,7 @@ This repo contains my personal dotfiles. It probably won't be useful to anyone e
 
 ## Install
 To use this repo and my dotfiles, I followed this [guide](https://www.atlassian.com/git/tutorials/dotfiles).
+by [Atlassian](https://atlassian.com)
 
 ### Notes
 * Make sure .zshrc or .bashrc has:
