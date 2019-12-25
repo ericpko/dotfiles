@@ -8,7 +8,7 @@ To use this repo and my dotfiles, I followed this [guide](https://www.atlassian.
 * Make sure .zshrc or .bashrc has:
   - alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 * Clone dotfiles into ~/.cfg with --bare
-  - git clone --bare <git-repo-url> $HOME/.cfg
+  - git clone --bare https://github.com/ericpko/dotfiles.git $HOME/.cfg
 * When you are in $HOME dir, you have to use:
   - config checkout master
   to actually bring the dotfiles into the home directory
