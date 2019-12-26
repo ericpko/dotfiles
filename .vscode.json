@@ -10,7 +10,7 @@
   ],
   "files.insertFinalNewline": true,
   "[cpp]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
+    "editor.defaultFormatter": "xaver.clang-format"
   },
 
 
