@@ -42,4 +42,5 @@
       "after": ["^"]
     }
   ],
+  "mesonbuild.configureOnOpen": false,
 }
