@@ -75,6 +75,7 @@
 
 [commit]
 	# https://help.github.com/articles/signing-commits-using-gpg/
+	# Consider turning this on in the future to sign commits. And brew install gpg
 	# gpgsign = true
 
 
