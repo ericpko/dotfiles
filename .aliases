@@ -29,13 +29,24 @@ fi
 export CLICOLOR=1
 
 # List all files colorized in long format
-alias l="ls -lF ${colorflag}"
+alias l="exa -lF --group-directories-first --git --color-scale"
 # List all files colorized in long format, excluding . and ..
-alias la="ls -lAF ${colorflag}"
+#alias la="ls -lAF ${colorflag}"
+alias la="exa -laFhS --group-directories-first --git --color-scale"
 # List only directories
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+#alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+alias lsd="exa -lD --git --color-scale"
 # Always use color output for `ls`
-alias ls="command ls ${colorflag}"
+#alias ls="command ls ${colorflag}"
+alias ls="command exa"
+# List as a tree
+alias l1="exa -T --level=1 --group-directories-first --color-scale"
+alias l2="exa -T --level=2 --group-directories-first --color-scale"
+alias l3="exa -T --level=3 --group-directories-first --color-scale"
+alias lt="exa -T --group-directories-first --color-scale"
+
+# Use bat instead of cat
+alias cat="command bat"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
