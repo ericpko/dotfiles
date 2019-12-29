@@ -4,6 +4,8 @@
 
 module.exports = {
   config: {
+    // hyper-opacity plugin setting:
+    opacity: 0.8,
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
@@ -138,6 +140,13 @@ module.exports = {
     webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    // hyperterm-summon settings
+    summon: {
+      hideDock: true,
+      hideOnBlur: true,
+      hotkey: 'CmdOrCtrl+Return',
+    },
   },
 
   // a list of plugins to fetch and install from npm
@@ -150,14 +159,19 @@ module.exports = {
     // "hyper-snazzy",
     "hyperline",
     "hyperterm-panda",
+    "hyper-opacity",
+    "hypercwd",
+    "hyperterm-summon",
+    "hyperpower",
   ],
 
+  // hyperline plugin settings
   hyperline: {
-    plugins: [                                                                 
-      "ip",                                                                    
-      "cpu",                                                                   
-      "spotify"                                                                
-    ]                                                                          
+    plugins: [
+      "ip",
+      "cpu",
+      "spotify"
+    ]
   },
 
   // in development, you can create a directory under
