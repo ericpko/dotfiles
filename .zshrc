@@ -10,7 +10,7 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # Load the shell dotfiles
-for file in ~/.{exports,aliases,functions}; do
+for file in ${HOME}/.shell/.{exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -29,4 +29,5 @@ fi
 
 
 # Load syntax highlighting
+# TODO: could relocate this .zsh script into .shell folder
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

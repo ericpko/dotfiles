@@ -15,3 +15,14 @@ To use this repo and my dotfiles, I followed this [guide](https://www.atlassian.
 * A --bare repo is as if we're the remote. In the ~/.cfg repo there is the usual .git/ stuff
 * Use config from the home dir $HOME (~) as if it is git
   - i.e. config add ..., config commit -m "", etc.
+
+
+#### .settings
+This directory contains settings that aren't dotfiles in the home directory.
+
+* Remember to hard link the .settings/.vscode.json to the real vscode user settings file
+
+
+#### .shell
+This directory contains the default shell (zsh) loading files like aliases. Use this directory
+to unclutter the dotfiles in the home dir.
