@@ -29,7 +29,7 @@ fi
 export CLICOLOR=1
 
 # List all files colorized in long format
-alias l="exa -lF --group-directories-first --git --color-scale"
+alias l="exa -lFh --group-directories-first --git --color-scale"
 # List all files colorized in long format, excluding . and ..
 #alias la="ls -lAF ${colorflag}"
 alias la="exa -laFhS --group-directories-first --git --color-scale"
