@@ -5,7 +5,7 @@
 module.exports = {
   config: {
     // hyper-opacity plugin setting:
-    opacity: 0.8,
+    opacity: 1.0,
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
@@ -156,9 +156,9 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    // "hyper-snazzy",
+    "hyper-snazzy",
     "hyperline",
-    "hyperterm-panda",
+    // "hyperterm-panda",
     "hyper-opacity",
     "hypercwd",
     "hyperterm-summon",
