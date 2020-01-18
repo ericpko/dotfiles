@@ -143,8 +143,8 @@ module.exports = {
 
     // hyperterm-summon settings
     summon: {
-      hideDock: true,
-      hideOnBlur: true,
+      // hideDock: true,
+      // hideOnBlur: true,
       hotkey: 'CmdOrCtrl+Return',
     },
   },
