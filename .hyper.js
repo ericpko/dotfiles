@@ -157,8 +157,8 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     "hyper-snazzy",
-    "hyperline",
     // "hyperterm-panda",
+    "hyperline",
     "hyper-opacity",
     "hypercwd",
     "hyperterm-summon",
