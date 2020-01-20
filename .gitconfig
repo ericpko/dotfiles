@@ -7,7 +7,7 @@
 
 [core]
 	# Default editor	
-	editor = nvim
+	editor = code
 	
 	# Use a global .gitignore file.
 	excludesfile = ~/.gitignore_global
