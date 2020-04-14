@@ -4,13 +4,15 @@
   "workbench.iconTheme": "vscode-icons",
   "editor.tabSize": 2,
   "editor.wordWrapColumn": 100,
-  "editor.fontFamily": "Hæck, Fira Code, Hack, Menlo, Monaco, Consolas, Roboto Mono, monospace",
+  "editor.fontFamily": "Menlo, Roboto Mono, Hæck, Fira Code, Hack, Monaco, Consolas, monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
+  "editor.lineHeight": 21,
   "editor.rulers": [
     100
   ],
   "files.insertFinalNewline": true,
+  
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },
@@ -20,35 +22,4 @@
     "editor.detectIndentation": false,
     "editor.tabSize": 4
   },
-
-
-
-
-
-  // ------- Vim Settings -------
-  "vim.enableNeovim": true,
-  "vim.neovimPath": "/usr/local/bin/nvim",
-  "vim.vimrc.enable": true,
-  "vim.vimrc.path": "~/.vimrc",
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-
-  // Some settings
-  "vim.easymotion": true,
-  "vim.useSystemClipboard": true,
-
-  // Key remappings. Some work from ~/.vimrc
-  "vim.leader": ",",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<ESC>"]
-    }
-  ],
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["0"],
-      "after": ["^"]
-    }
-  ],
-
 }
