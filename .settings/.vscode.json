@@ -23,3 +23,16 @@
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
 }
+
+
+// --- Extensions ---
+// Auto Comment Blocks
+// Bracket Pair Colorizer 2
+// Comment Anchors
+// Comment Divider
+// EditorConfig
+// Panda Theme
+// Remote - SSH, and others
+// Visual Studio IntelliCode
+// vscode-icons
+// Language extensions
