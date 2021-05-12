@@ -1,28 +1,37 @@
 {
-    "workbench.colorTheme": "Panda Syntax",
-    "workbench.iconTheme": "vscode-icons",
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "editor.tabSize": 2,
-    "editor.wordWrapColumn": 100,
-    "editor.fontFamily": "Cascadia Code, Roboto Mono, Hack NF, Menlo, Consolas",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 14,
-    "editor.lineHeight": 21,
-    "editor.rulers": [
-      80,
-      100
-    ],
-    "files.insertFinalNewline": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "workbench.colorTheme": "Panda Syntax",
+  "workbench.iconTheme": "vscode-icons",
+
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 100,
+  "editor.fontFamily": "Cascadia Code, Roboto Mono, Hack NF, Menlo, Consolas",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 21,
+  "editor.rulers": [
+    80,
+    100
+  ],
+  "[makefile]": {
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4
+  },
+
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
   
-    "[makefile]": {
-      "editor.insertSpaces": false,
-      "editor.detectIndentation": false,
-      "editor.tabSize": 4
-    },
-    "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+  "files.insertFinalNewline": true,
 }
+
 
 
 // --- Extensions ---
@@ -30,6 +39,7 @@
 // Bracket Pair Colorizer 2
 // Comment Anchors
 // Comment Divider
+// Better Comments
 // EditorConfig
 // Panda Theme
 // Remote - SSH, and others
