@@ -212,3 +212,8 @@
 
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
+
+
+[credential]
+	# Set the cache to timeout after 12 hours (setting is in seconds)
+	helper = cache --timeout=43200
