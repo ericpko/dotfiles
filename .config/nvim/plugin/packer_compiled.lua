@@ -121,6 +121,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/eric/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/eric/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/eric/.local/share/nvim/site/pack/packer/start/telescope.nvim"

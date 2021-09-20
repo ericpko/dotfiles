@@ -1,6 +1,3 @@
-
-require('config')
+require('settings')
 require('keybinds')
 require('plugins')
-
-
