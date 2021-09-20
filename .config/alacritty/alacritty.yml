@@ -177,7 +177,7 @@ draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night)
 import:
-        - /home/eric/.config/alacritty/themes/dracula.yml
+        - /home/eric/.config/alacritty/themes/nord.yml
 
 # Bell
 #
