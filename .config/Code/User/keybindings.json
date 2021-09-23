@@ -1,0 +1,106 @@
+[
+   {
+      "key": "shift+enter",
+      "command": "extension.jumpy-word",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "Escape",
+      "command": "extension.jumpy-exit",
+      "when": "editorTextFocus && jumpy.isJumpyMode"
+   },
+   {
+      "key": "ctrl+enter",
+      "command": "workbench.action.terminal.toggleTerminal",
+      "when": "terminal.active"
+   },
+   {
+      "key": "ctrl+`",
+      "command": "-workbench.action.terminal.toggleTerminal",
+      "when": "terminal.active"
+   },
+   {
+      "key": "ctrl+j",
+      "command": "selectNextSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+   },
+   {
+      "key": "ctrl+k",
+      "command": "selectPrevSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+   },
+   {
+      "key": "r",
+      "command": "renameFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+   },
+   {
+      "key": "ctrl+j",
+      "command": "workbench.action.quickOpenNavigateNext",
+      "when": "inQuickOpen"
+   },
+   {
+      "key": "ctrl+k",
+      "command": "workbench.action.quickOpenNavigatePrevious",
+      "when": "inQuickOpen"
+   },
+   {
+      "key": "d",
+      "command": "deleteFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+   },
+   {
+      "key": "y",
+      "command": "filesExplorer.copy",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+   },
+   {
+      "key": "x",
+      "command": "filesExplorer.cut",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+   },
+   {
+      "key": "p",
+      "command": "filesExplorer.paste",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+   },
+   {
+      "key": "v",
+      "command": "explorer.openToSide",
+      "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+   },
+   {
+      "key": "a",
+      "command": "explorer.newFile",
+      "when": "filesExplorerFocus && !inputFocus"
+   },
+   {
+      "key": "shift+a",
+      "command": "explorer.newFolder",
+      "when": "filesExplorerFocus && !inputFocus"
+   },
+   {
+      "key": "ctrl+l",
+      "when": "sideBarFocus",
+      "command": "workbench.action.focusActiveEditorGroup"
+   },
+   {
+      "key": "ctrl+k",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "terminalFocus"
+   },
+   {
+      "key": "ctrl+j",
+      "command": "-workbench.action.togglePanel"
+   },
+   {
+      "key": "tab",
+      "command": "workbench.action.quickOpenNavigateNext",
+      "when": "inQuickOpen"
+   },
+   {
+      "key": "shift+tab",
+      "command": "workbench.action.quickOpenNavigatePrevious",
+      "when": "inQuickOpen"
+   },
+]
