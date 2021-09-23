@@ -94,6 +94,11 @@
       "command": "-workbench.action.togglePanel"
    },
    {
+      "key": "enter",
+      "command": "-acceptSelectedSuggestion",
+      "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+   },
+   {
       "key": "tab",
       "command": "workbench.action.quickOpenNavigateNext",
       "when": "inQuickOpen"

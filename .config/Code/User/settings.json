@@ -84,15 +84,31 @@
             }
          ]
       },
+      // {
+      //    "before": [
+      //       "tab"
+      //    ],
+      //    "commands": [
+      //       {
+      //          "command": "editor.action.jumpToBracket",
+      //          "when": "editorTextFocus"
+      //       }
+      //    ]
+      // },
       {
          "before": [
             "tab"
          ],
          "commands": [
-            {
-               "command": "editor.action.jumpToBracket",
-               "when": "editorTextFocus"
-            }
+            "workbench.action.nextEditor"
+         ]
+      },
+      {
+         "before": [
+            "shift+tab"
+         ],
+         "commands": [
+            "workbench.action.previousEditor"
          ]
       },
       {
