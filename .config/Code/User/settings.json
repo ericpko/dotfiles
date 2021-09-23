@@ -1,0 +1,236 @@
+{
+   "workbench.iconTheme": "material-icon-theme",
+   "editor.tabSize": 3,
+   "editor.wordWrapColumn": 100,
+   "editor.fontFamily": "Input Mono Narrow, Roboto Sans Mono, Noto Sans Mono, Cascadia Code",
+   "editor.fontLigatures": false,
+   "editor.fontSize": 17,
+   "editor.lineHeight": 24,
+   "editor.rulers": [
+      100
+   ],
+   "[makefile]": {
+      "editor.insertSpaces": false,
+      "editor.detectIndentation": false,
+      "editor.tabSize": 4
+   },
+   "terminal.integrated.cursorStyle": "line",
+   "files.insertFinalNewline": true,
+   "editor.suggestSelection": "first",
+   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+   "editor.tabCompletion": "on",
+   "workbench.list.automaticKeyboardNavigation": false,
+
+   "vim.easymotion": true,
+   "vim.highlightedyank.enable": true,
+   "vim.joinspaces": false,
+   "vim.leader": "<space>",
+   "vim.sneak": true,
+   "vim.sneakReplacesF": true,
+   "vim.sneakUseIgnorecaseAndSmartcase": true,
+   "vim.textwidth": 100,
+   "vim.useSystemClipboard": true,
+   "vim.insertModeKeyBindings": [
+      {
+         "before": [
+            "j",
+            "k"
+         ],
+         "after": [
+            "<Esc>"
+         ]
+      },
+   ],
+   "vim.normalModeKeyBindings": [
+      {
+         "before": [
+            "<leader>",
+            "m"
+         ],
+         "commands": [
+            "bookmarks.toggle"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "b"
+         ],
+         "commands": [
+            "bookmarks.list"
+         ]
+      },
+      {
+         "before": [
+            "g",
+            "s"
+         ],
+         "commands": [
+            {
+               "command": "workbench.action.quickOpen",
+               "args": "@:"
+            }
+         ],
+      },
+      {
+         "before": [
+            "g",
+            "t"
+         ],
+         "commands": [
+            {
+               "command": "workbench.action.quickOpen",
+               "args": "#:"
+            }
+         ]
+      },
+      {
+         "before": [
+            "tab"
+         ],
+         "commands": [
+            {
+               "command": "editor.action.jumpToBracket",
+               "when": "editorTextFocus"
+            }
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "c",
+            "r"
+         ],
+         "commands": ["editor.action.rename"]
+      },
+      {
+         "before": [
+            "<leader>",
+            "u",
+            "a"
+         ],
+         "commands": [
+            "workbench.action.toggleActivityBarVisibility"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "u",
+            "s"
+         ],
+         "commands": [
+            "workbench.action.toggleSidebarVisibility"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "u",
+            "m"
+         ],
+         "commands": [
+            "workbench.action.toggleMenuBar"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "u",
+            "M"
+         ],
+         "commands": [
+            "editor.action.toggleMinimap"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "o",
+            "e"
+         ],
+         "commands": [
+            "workbench.view.explorer"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "o",
+            "t"
+         ],
+         "commands": [
+            "workbench.action.terminal.toggleTerminal"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            ":"
+         ],
+         "commands": [
+            "workbench.action.showCommands"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "."
+         ],
+         "commands": [
+            "workbench.action.quickOpen"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "f",
+            "f"
+         ],
+         "commands": [
+            "workbench.action.quickOpen"
+         ]
+      },
+   ],
+   "vim.operatorPendingModeKeyBindings": [
+      {
+         "before": [
+            "L"
+         ],
+         "after": [
+            "$"
+         ]
+      },
+      {
+         "before": [
+            "H"
+         ],
+         "after": [
+            "^"
+         ]
+      }
+   ],
+   "vim.visualModeKeyBindings": [
+      {
+         "before": [
+            ">"
+         ],
+         "commands": [
+            "editor.action.indentLines"
+         ]
+      },
+      {
+         "before": [
+            "<"
+         ],
+         "commands": [
+            "editor.action.outdentLines"
+         ]
+      },
+   ],
+   "workbench.colorTheme": "Blueberry dark theme",
+   "window.menuBarVisibility": "toggle",
+   "editor.minimap.enabled": false,
+   "terminal.integrated.cursorBlinking": true,
+   "workbench.activityBar.visible": false,
+}
