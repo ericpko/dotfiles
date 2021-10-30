@@ -1,14 +1,14 @@
 [
-   {
-      "key": "shift+enter",
-      "command": "extension.jumpy-word",
-      "when": "editorTextFocus"
-   },
-   {
-      "key": "Escape",
-      "command": "extension.jumpy-exit",
-      "when": "editorTextFocus && jumpy.isJumpyMode"
-   },
+   // {
+   //    "key": "shift+enter",
+   //    "command": "extension.jumpy-word",
+   //    "when": "editorTextFocus"
+   // },
+   // {
+   //    "key": "Escape",
+   //    "command": "extension.jumpy-exit",
+   //    "when": "editorTextFocus && jumpy.isJumpyMode"
+   // },
    {
       "key": "ctrl+enter",
       "command": "workbench.action.terminal.toggleTerminal",
