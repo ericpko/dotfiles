@@ -322,4 +322,5 @@
    "workbench.activityBar.visible": false,
    "window.menuBarVisibility": "toggle",
    "editor.minimap.enabled": false,
+   "editor.cursorBlinking": "phase",
 }
