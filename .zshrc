@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-PATH=$PATH:$HOME/.local/bin
+# PATH=$PATH:$HOME/.local/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/eric/.oh-my-zsh"
@@ -71,7 +71,8 @@ export ZSH="/home/eric/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git colored-man-pages zsh-autosuggestions zsh-syntax-highlighting sudo web-search
+         copydir macos)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,6 +116,8 @@ alias ps="procs"
 alias sed="sd"
 alias du="dust"
 alias grep="rg"
+alias open="nautilus --browser"
+alias show="display"
 
 
 eval "$(starship init zsh)"
