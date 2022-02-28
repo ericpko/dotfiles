@@ -19,11 +19,11 @@
 
 ## Themes
 - Blueberry dark theme
+- Dark Sea
+- Sea Green Theme
 - Panda theme
 - Nord
-- One Dark Pro
-- Simple Dark
-- Dracula Theme
+- Nord Wave
 
 ## AI
 - Github Copilot
