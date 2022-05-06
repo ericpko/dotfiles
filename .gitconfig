@@ -217,3 +217,7 @@
 [credential]
 	# Set the cache to timeout after 12 hours (setting is in seconds)
 	helper = store
+
+
+[init]
+	defaultBranch = main
