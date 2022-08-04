@@ -1,17 +1,34 @@
 {
-   "workbench.colorTheme": "Blueberry dark theme",
+   "editor.suggestSelection": "first",
+   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
    "workbench.iconTheme": "material-icon-theme",
    "workbench.list.smoothScrolling": true,
    "workbench.list.automaticKeyboardNavigation": false,
    "editor.cursorSmoothCaretAnimation": true,
    "editor.smoothScrolling": true,
+   "editor.cursorBlinking": "phase",
    "editor.tabSize": 3,
-   "editor.tabCompletion": "on",
+   "editor.tabCompletion": "off",
+   "editor.acceptSuggestionOnEnter": "smart",
    "editor.wordWrapColumn": 100,
-   "editor.fontFamily": "Input Mono Narrow, Roboto Sans Mono, Noto Sans Mono, Cascadia Code",
+   "editor.fontFamily": "Roboto Sans Mono, Noto Sans Mono, Input Mono Narrow",
    "editor.fontLigatures": false,
-   "editor.fontSize": 14,
-   // "editor.lineHeight": 19,
+   "editor.fontSize": 14, // 16 is nice with line hight: 24
+   "editor.inlayHints.enabled": "on", // toggle with ctrl+i
+   "editor.inlayHints.fontSize": 0,
+   "editor.lineNumbers": "off",
+   "editor.formatOnPaste": true,
+   "editor.formatOnSave": true,
+   "editor.formatOnType": true,
+   "workbench.colorCustomizations": {
+      "editorInlayHint.foreground": "#696969",
+      "editorInlayHint.background": "#ffffff00",
+      "editorCursor.foreground": "#00eeff",
+      "editorCursor.background": "#142627",
+      "statusBar.background": "#005f5f",
+      "statusBar.noFolderBackground": "#005f5f",
+      "statusBar.debuggingBackground": "#005f5f"
+   },
    "editor.rulers": [
       100
    ],
@@ -20,27 +37,53 @@
       "editor.detectIndentation": false,
       "editor.tabSize": 4
    },
+   "[rust]": {
+      "editor.tabSize": 4,
+   },
    "terminal.integrated.cursorStyle": "line",
    "terminal.integrated.cursorBlinking": true,
    "files.insertFinalNewline": true,
-   "editor.suggestSelection": "first",
-   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-
-
-   /* -------------------------------------------------------------------------- */
-   /*                                VIM Settings                                */
-   /* -------------------------------------------------------------------------- */
+   "editor.bracketPairColorization.enabled": true,
+   "yaml.schemas": {
+      "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+   },
+   "workbench.startupEditor": "none",
+   "editor.multiCursorModifier": "ctrlCmd",
+   "redhat.telemetry.enabled": false,
+   "editor.inlineSuggest.enabled": true,
+   "diffEditor.codeLens": true,
+   "svelte.enable-ts-plugin": true,
+   "errorLens.enabled": true,
+   // indent guides
+   // https://stackoverflow.com/questions/49255934/how-can-i-hide-indent-guides-in-visual-studio-code
+   "editor.guides.indentation": false,
+   "editor.mouseWheelZoom": true,
+   "editor.scrollbar.verticalScrollbarSize": 8,
+   "editor.scrollbar.horizontalScrollbarSize": 8,
+   "liveServer.settings.donotShowInfoMsg": true,
+   "scm.diffDecorationsGutterWidth": 1,
+   "errorLens.gutterIconsEnabled": true,
+   "editor.renderLineHighlight": "none",
+   "window.menuBarVisibility": "toggle",
+   "editor.minimap.enabled": false,
+   "workbench.editor.tabSizing": "shrink",
+   "workbench.editor.enablePreview": false,
+   "editor.cursorSurroundingLines": 5,
+   // Vim extension settings
+   "vim.camelCaseMotion.enable": true,
+   "vim.changeWordIncludesWhitespace": true,
+   "vim.cursorStylePerMode.visual": "underline-thin",
+   "vim.cursorStylePerMode.visualblock": "underline",
    "vim.easymotion": true,
-   "vim.scroll": 9,
    "vim.highlightedyank.enable": true,
-   "vim.joinspaces": false,
    "vim.leader": "<space>",
-   "vim.sneak": false,
+   "vim.scroll": 9,
+   "vim.sneak": true,
    "vim.sneakReplacesF": true,
    "vim.sneakUseIgnorecaseAndSmartcase": true,
+   "vim.statusBarColorControl": true,
    "vim.textwidth": 100,
    "vim.useSystemClipboard": true,
-   /* ----------------------------- Vim Insert Mode ---------------------------- */
    "vim.insertModeKeyBindings": [
       {
          "before": [
@@ -50,29 +93,140 @@
          "after": [
             "<Esc>"
          ]
-      },
+      }
    ],
-   /* ----------------------------- Vim Normal Mode ---------------------------- */
    "vim.normalModeKeyBindings": [
       {
          "before": [
             "<leader>",
-            "m"
+            ":"
          ],
          "commands": [
-            "bookmarks.toggle"
+            "workbench.action.showCommands",
+         ],
+         "silent": true
+      },
+      {
+         "before": [
+            "<leader>",
+            "k"
+         ],
+         "commands": [
+            "editor.action.showHover",
+         ]
+      },
+      // Window management
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "w"
+         ],
+         "commands": [
+            "workbench.action.nextEditor",
          ]
       },
       {
          "before": [
             "<leader>",
-            "b"
+            "w",
+            "s"
          ],
          "commands": [
-            "bookmarks.list"
+            "workbench.action.splitEditorDown"
          ]
       },
-      // Go-to commands
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "v"
+         ],
+         "commands": [
+            "workbench.action.splitEditorRight"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "q"
+         ],
+         "commands": [
+            "workbench.action.closeActiveEditor"
+         ]
+      },
+      // Window navigation
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "h"
+         ],
+         "commands": [
+            "workbench.action.navigateLeft"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "l"
+         ],
+         "commands": [
+            "workbench.action.navigateRight"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "j"
+         ],
+         "commands": [
+            "workbench.action.navigateDown"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "k"
+         ],
+         "commands": [
+            "workbench.action.navigateUp"
+         ]
+      },
+      // Diagnostics - Go to next problem
+      {
+         "before": [
+            "<leader>",
+            "g",
+         ],
+         "commands": [
+            "editor.action.marker.next"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "G",
+         ],
+         "commands": [
+            "editor.action.marker.nextInFiles"
+         ]
+      },
+      // Code actions
+      {
+         "before": [
+            "<leader>",
+            "a",
+         ],
+         "commands": [
+            "keyboard-quickfix.openQuickFix",
+         ]
+      },
+      // Go-to / easy motion
       {
          "before": [
             "g",
@@ -88,93 +242,121 @@
       {
          "before": [
             "g",
+            "h",
+         ],
+         "after": [
+            "0",
+         ]
+      },
+      {
+         "before": [
+            "g",
+            "l",
+         ],
+         "after": [
+            "$",
+         ]
+      },
+      {
+         "before": [
+            "g",
             "s",
-            "s"
          ],
          "after": [
-            "<leader>",
-            "<leader>",
-            "2",
-            "s"
-         ]
-      },
-      // <s> replaces vim-sneak. Changed vim.sneak: false for now
-      {
-         "before": [
-            "s"
-         ],
-         "after": [
-            "<leader>",
-            "<leader>",
-            "<leader>",
-            "j"
-         ]
-      },
-      // Doesn't work yet: https://github.com/VSCodeVim/Vim/issues/5122
-      {
-         "before": [
-            "shift+enter"
-         ],
-         "after": [
-            "<leader>",
-            "<leader>",
-            "<leader>",
-            "j"
+            "^",
          ]
       },
       {
          "before": [
             "g",
-            "s"
+            "r",
          ],
          "commands": [
-            {
-               "command": "workbench.action.quickOpen",
-               "args": "@:"
-            }
-         ],
+            "editor.action.goToReferences"
+         ]
       },
       {
          "before": [
             "g",
-            "t"
+            "e",
+         ],
+         "after": [
+            "G",
+         ]
+      },
+      {
+         "before": [
+            "g",
+            "y",
+         ],
+         "commands": [
+            "editor.action.goToTypeDefinition"
+         ]
+      },
+      {
+         "before": [
+            "g",
+            "p",
+            "d",
+         ],
+         "commands": [
+            "editor.action.peekDefinition"
+         ]
+      },
+      {
+         "before": [
+            "g",
+            "i",
+         ],
+         "commands": [
+            "editor.action.goToImplementation"
+         ]
+      },
+      // Search symbol in file
+      {
+         "before": [
+            "<leader>",
+            "s",
          ],
          "commands": [
             {
                "command": "workbench.action.quickOpen",
-               "args": "#"
+               "args": "@:",
             }
          ]
       },
-      {
-         "before": [
-            "["
-         ],
-         "commands": [
-            {
-               "command": "editor.action.jumpToBracket",
-               "when": "editorTextFocus"
-            }
-         ]
-      },
-      // Code editing keybinds
+      // Search symbols across files
       {
          "before": [
             "<leader>",
-            "c",
+            "S",
+         ],
+         "commands": [
+            {
+               "command": "workbench.action.quickOpen",
+               "args": "#",
+            }
+         ]
+      },
+      // rename symbol
+      {
+         "before": [
+            "<leader>",
             "r"
          ],
-         "commands": ["editor.action.rename"]
+         "commands": [
+            "editor.action.rename"
+         ]
       },
-      // Toggle keybinds
+      // Toggles
       {
          "before": [
             "<leader>",
             "t",
-            "t"
+            "n"
          ],
          "commands": [
-            "workbench.action.terminal.toggleTerminal"
+            "editor.action.toggleLineNumbers"
          ]
       },
       {
@@ -200,11 +382,10 @@
       {
          "before": [
             "<leader>",
-            "t",
-            "m"
+            "e"
          ],
          "commands": [
-            "workbench.action.toggleMenuBar"
+            "workbench.action.toggleSidebarVisibility"
          ]
       },
       {
@@ -214,15 +395,24 @@
             "M"
          ],
          "commands": [
+            "workbench.action.toggleMenuBar"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "t",
+            "m"
+         ],
+         "commands": [
             "editor.action.toggleMinimap"
          ]
       },
-      // Open keybinds
+      // Open
       {
          "before": [
             "<leader>",
             "o",
-            "e"
          ],
          "commands": [
             "workbench.view.explorer"
@@ -244,14 +434,13 @@
             ","
          ],
          "commands": [
-            "workbench.action.quickOpen"
+            "workbench.action.quickOpenPreviousEditor"
          ]
       },
       {
          "before": [
             "<leader>",
             "f",
-            "f"
          ],
          "commands": [
             "workbench.action.quickOpen"
@@ -259,34 +448,19 @@
       },
       {
          "before": [
-            "tab"
-         ],
-         "commands": [
-            "workbench.action.nextEditor"
-         ]
-      },
-      {
-         "before": [
-            "shift+tab"
-         ],
-         "commands": [
-            "workbench.action.previousEditor"
-         ]
-      },
-      {
-         "before": [
             "<leader>",
-            ":"
+            "b",
          ],
          "commands": [
-            "workbench.action.showCommands"
+            "workbench.action.quickOpenPreviousEditor"
          ]
       },
    ],
+   // Bind L to $ and H to ^ in operator pending mode makes yL and dH work like y$ and d^ respectively:
    "vim.operatorPendingModeKeyBindings": [
       {
          "before": [
-            "L"
+            "l"
          ],
          "after": [
             "$"
@@ -294,7 +468,7 @@
       },
       {
          "before": [
-            "H"
+            "h"
          ],
          "after": [
             "^"
@@ -318,9 +492,47 @@
             "editor.action.outdentLines"
          ]
       },
+      // Window navigation
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "h"
+         ],
+         "commands": [
+            "workbench.action.navigateLeft"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "l"
+         ],
+         "commands": [
+            "workbench.action.navigateRight"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "j"
+         ],
+         "commands": [
+            "workbench.action.navigateDown"
+         ]
+      },
+      {
+         "before": [
+            "<leader>",
+            "w",
+            "k"
+         ],
+         "commands": [
+            "workbench.action.navigateUp"
+         ]
+      },
    ],
-   "workbench.activityBar.visible": false,
-   "window.menuBarVisibility": "toggle",
-   "editor.minimap.enabled": false,
-   "editor.cursorBlinking": "phase",
+   "workbench.activityBar.visible": false
 }

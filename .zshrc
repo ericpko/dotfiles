@@ -2,6 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # PATH=$PATH:$HOME/.local/bin
 
+export TERM="alacritty"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/eric/.oh-my-zsh"
 
@@ -72,7 +74,7 @@ export ZSH="/home/eric/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git colored-man-pages zsh-autosuggestions zsh-syntax-highlighting sudo web-search
-         copydir vi-mode macos)
+         copypath vi-mode macos)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,6 +120,19 @@ alias du="dust"
 alias grep="rg"
 alias open="nautilus --browser"
 alias show="display"
+alias c="cargo"
+alias cb="cargo build"
+alias cbr="cargo build --release"
+alias cr="cargo run"
+alias crr="cargo run --release"
+# alias hx="helix"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
 
 
 eval "$(starship init zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
