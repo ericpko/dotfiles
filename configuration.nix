@@ -4,7 +4,10 @@
 
 { config, pkgs, ... }:
 
-{
+let
+  unstable = import <unstable> { config.allowUnfree = true; };
+
+in {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -79,7 +82,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox spotify discord
-      vscode alacritty
+      unstable.vscode alacritty
     ];
   };
 
@@ -89,7 +92,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim helix
+    unstable.helix neovim
     git wget curl bat exa fd procs sd du-dust ripgrep neofetch htop tldr
     gparted wmctrl
     zsh oh-my-zsh nushell starship
