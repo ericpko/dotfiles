@@ -30,6 +30,7 @@ in {
 
   # Set your time zone.
   time.timeZone = "America/Toronto";
+  time.hardwareClockInLocalTime = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.utf8";
@@ -82,7 +83,7 @@ in {
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox spotify discord
-      unstable.vscode alacritty
+      unstable.vscode alacritty vlc flameshot
     ];
   };
 
@@ -93,9 +94,11 @@ in {
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     unstable.helix neovim
-    git wget curl bat exa fd procs sd du-dust ripgrep neofetch htop tldr
-    gparted wmctrl
-    zsh oh-my-zsh nushell starship
+    git wget curl
+    bat exa fd procs sd du-dust ripgrep 
+    neofetch htop tldr xclip wmctrl scrot
+    gparted imagemagick hwinfo
+    zsh oh-my-zsh starship
     gnome.gnome-tweaks
   ];
 
@@ -113,7 +116,7 @@ in {
     ohMyZsh = {
       enable = true;
       plugins = [
-        "git" "colored-man-pages" "sudo" "web-search" "copypath" "vi-mode" "macos"
+        "git" "colored-man-pages" "sudo" "web-search" "copypath"
       ];
     };
   };
