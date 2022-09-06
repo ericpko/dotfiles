@@ -3,6 +3,7 @@ theme = "dark_plus"
 [editor]
 line-number = "relative"
 scrolloff = 5
+gutters = ["diagnostics"]
 
 [editor.cursor-shape]
 insert = "bar"
