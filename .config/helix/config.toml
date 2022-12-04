@@ -1,9 +1,11 @@
-theme = "dark_plus"
+theme = "fleetish"
 
 [editor]
 line-number = "relative"
 scrolloff = 5
-gutters = ["diagnostics"]
+# gutters = ["diagnostics"]
+bufferline = "always"
+color-modes = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -12,14 +14,18 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+# max-depth = 2
 
 [editor.lsp]
 display-messages = true
 
 [keys.normal]
-C-s = ":w"
 "ret" = ["open_below", "normal_mode"]
 "space" = { c = "toggle_comments" }
+C-d = ["half_page_down", "align_view_center"]
+C-u = ["half_page_up", "align_view_center"]
+C-b = ["page_up", "align_view_center"]
+C-f = ["page_down", "align_view_center"]
 
 [keys.insert]
 j = { k = "normal_mode" }
