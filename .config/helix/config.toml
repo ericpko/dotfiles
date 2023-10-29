@@ -24,13 +24,16 @@ display-inlay-hints = true
 auto-signature-help = false
 
 [keys.normal]
-"ret" = ["open_below", "normal_mode"]
+# "ret" = ["open_below", "normal_mode"]
+
 # "space" = { c = "toggle_comments" }
 "space" = { c = ":buffer-close" }
-C-d = ["half_page_down", "align_view_center"]
-C-u = ["half_page_up", "align_view_center"]
-C-b = ["page_up", "align_view_center"]
-C-f = ["page_down", "align_view_center"]
+
+# C-d = ["half_page_down", "align_view_center"]
+# C-u = ["half_page_up", "align_view_center"]
+# C-b = ["page_up", "align_view_center"]
+# C-f = ["page_down", "align_view_center"]
+
 # move line up and down:
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
