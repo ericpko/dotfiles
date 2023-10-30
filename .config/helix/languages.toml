@@ -1,5 +1,6 @@
 [[language]]
 name = "rust"
+auto-format = true
 
 [language-server.rust-analyzer.config]
 check = { command = "clippy", features = "all" }
@@ -11,6 +12,12 @@ procMacro = { enable = true }
 
 
 [[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true
+
+
+[[language]]
 name = "typescript"
 language-servers = [
   "typescript-language-server",
@@ -18,7 +25,7 @@ language-servers = [
   "vscode-eslint-language-server",
   "emmet-language-server",
 ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'bunx', args = ["prettier", "--parser", "typescript"] }
 indent = { tab-width = 3, unit = "   " }
 auto-format = true
 
@@ -31,7 +38,7 @@ language-servers = [
   "vscode-eslint-language-server",
   "emmet-language-server",
 ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'bunx', args = ["prettier", "--parser", "typescript"] }
 indent = { tab-width = 3, unit = "   " }
 auto-format = true
 
@@ -39,7 +46,7 @@ auto-format = true
 [[language]]
 name = "json"
 language-servers = ["vscode-json-language-server"]
-formatter = { command = 'npx', args = ["prettier", "--parser", "json"] }
+formatter = { command = 'bunx', args = ["prettier", "--parser", "json"] }
 auto-format = true
 
 
@@ -50,7 +57,13 @@ language-servers = [
   "tailwindcss-ls",
   "emmet-language-server",
 ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "html"] }
+formatter = { command = 'bunx', args = [
+  "prettier",
+  "--parser",
+  "html",
+  "--plugin",
+  "prettier-plugin-tailwindcss",
+] }
 auto-format = true
 
 
@@ -61,7 +74,12 @@ language-servers = [
   "tailwindcss-ls",
   "emmet-language-server",
 ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
+formatter = { command = 'bunx', args = [
+  "prettier",
+  "--parser",
+  "css",
+  "--plugin=prettier-plugin-tailwindcss",
+] }
 auto-format = true
 
 
@@ -79,7 +97,7 @@ args = ["--stdio"]
 format = true
 nodePath = ""
 onIgnoredFiles = "off"
-packageManager = "npm"
+packageManager = "bun"
 quiet = false
 rulesCustomizations = []
 run = "onType"
