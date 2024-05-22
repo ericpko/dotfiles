@@ -21,7 +21,9 @@
     "use_smartcase_find": true
   },
   "relative_line_numbers": true,
-  // "scrollbar": { "show": "never" }
+  "scrollbar": { "show": "never" },
   // allow cursor to reach edges of screen
-  "vertical_scroll_margin": 10
+  "vertical_scroll_margin": 10,
+  "inlay_hints": { "enabled": true },
+  "git": { "inline_blame": { "enabled": false } }
 }
