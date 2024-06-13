@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "telemetry": {
+    "metrics": true
+  },
   "theme": "Atelier Seaside Light",
   "vim_mode": true,
   "ui_font_size": 16,
@@ -25,5 +28,10 @@
   // allow cursor to reach edges of screen
   "vertical_scroll_margin": 10,
   "inlay_hints": { "enabled": true },
-  "git": { "inline_blame": { "enabled": false } }
+  "git": { "inline_blame": { "enabled": false } },
+  "languages": {
+    "HTML": { "tab_size": 2 },
+    "CSS": { "tab_size": 2 },
+    "JSON": { "tab_size": 2 }
+  }
 }

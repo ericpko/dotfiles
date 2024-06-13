@@ -50,9 +50,10 @@
       "space h": "editor::SelectAllMatches",
       // Match mode
       "m m": "vim::Matching",
+      "m i w": ["workspace::SendKeystrokes", "v i w"],
       // Misc
-      "shift-k": "editor::MoveLineUp",
-      "shift-j": "editor::MoveLineDown",
+      // "shift-k": "editor::MoveLineUp",
+      // "shift-j": "editor::MoveLineDown",
       "ctrl-k": "editor::MoveLineUp",
       "ctrl-j": "editor::MoveLineDown"
     }
@@ -92,6 +93,12 @@
       "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
       "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "shift-ctrl-alt-cmd-enter": "assistant::Assist"
     }
   }
 ]
