@@ -12,6 +12,7 @@ This repo contains my personal dotfiles. It probably won't be useful to anyone e
 1. brew install starship
 1. brew install gh
 1. brew install --cask alacritty
+1. brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
 1. brew install helix
 1. brew install --cask zed@preview
 1. install rust lang
