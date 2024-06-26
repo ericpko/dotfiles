@@ -4,6 +4,7 @@ This repo contains my personal dotfiles. It probably won't be useful to anyone e
 
 # New system install
 
+Install everything in the following order.
 
 ## Fonts
 
