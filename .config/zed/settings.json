@@ -27,6 +27,7 @@
   "scrollbar": { "show": "never" },
   // allow cursor to reach edges of screen
   "vertical_scroll_margin": 10,
+  "soft_wrap": "none",
   "inlay_hints": { "enabled": true },
   "git": { "inline_blame": { "enabled": false } },
   "languages": {

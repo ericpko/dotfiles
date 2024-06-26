@@ -11,6 +11,12 @@
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
+      // Movement
+      "n": "vim::PreviousWordStart",
+      // "b": ["workspace::SendKeystrokes", "v n"],
+      // "w": ["workspace::SendKeystrokes", "v e"],
+      // "d": "vim::DeleteRight",
+      // "x": "editor::SelectLine",
       // Goto mode
       "g n": "pane::ActivateNextItem",
       "g p": "pane::ActivatePrevItem",
@@ -55,7 +61,9 @@
       // "shift-k": "editor::MoveLineUp",
       // "shift-j": "editor::MoveLineDown",
       "ctrl-k": "editor::MoveLineUp",
-      "ctrl-j": "editor::MoveLineDown"
+      "ctrl-j": "editor::MoveLineDown",
+      "ctrl-v": "editor::Paste",
+      "shift-u": "editor::Redo"
     }
   },
   {
