@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+# Paths
+PATH="$PATH:""$HOME"'/.cargo/bin'
+PATH="$PATH:""$HOME"'/.local/bin'
+PATH="$PATH:""$HOME"'/.bun/bin'
+
 
 # Exports
 export TERM="alacritty"
@@ -44,6 +49,8 @@ alias crr="cargo run --release"
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
+alias reload="exec ${SHELL} -l"
+alias path='echo -e ${PATH//:/\\n}'
 
 
 # Starship prompt
