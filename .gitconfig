@@ -2,13 +2,13 @@
 
 [user]
 	name = Eric K
-	email = eric.koehli@mail.utoronto.ca
+	email = erickoehli@gmail.com
 
 
 [core]
-	# Default editor	
+	# Default editor
 	editor = code
-	
+
 	# Use a global .gitignore file.
 	excludesfile = ~/.gitignore_global
 
@@ -148,7 +148,7 @@
 	# List the files are in the repository (like ls)
 	ls = ls-files
 	ls2 = git ls-tree --full-tree -r --name-only HEAD
-	
+
 	# View the current working tree status using the short format (-s)
 	s = status
 	ss = status -s
