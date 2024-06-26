@@ -4,20 +4,6 @@ This repo contains my personal dotfiles. It probably won't be useful to anyone e
 
 # New system install
 
-## Terminal/Dev setup
-
-1. brew install [nerd fonts](#Fonts)
-1. install oh-my-zsh
-1. install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
-1. install [zsh-completions](https://github.com/zsh-users/zsh-completions)
-1. brew install starship
-1. brew install gh
-1. brew install --cask alacritty
-1. brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
-1. brew install helix
-1. brew install --cask zed@preview
-1. install rust lang
-1. clone this repo into $HOME/Developer
 
 ## Fonts
 
@@ -29,10 +15,39 @@ This repo contains my personal dotfiles. It probably won't be useful to anyone e
 - brew install --cask font-source-sans-3
 
 
+## oh-my-zsh
+
+Install oh-my-zsh first, then decide if you want to install
+[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md),
+[zsh-completions](https://github.com/zsh-users/zsh-completions), and
+[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+through homebrew on as oh-my-zsh plugin (git) installs. If you choose homebrew, read
+the homebrew page to see what needs to be added to .zshrc file.
+
+Easier to just install through oh-my-zsh plugins.
+
+1. install [oh-my-zsh](https://ohmyz.sh)
+1. install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+1. install [zsh-completions](https://github.com/zsh-users/zsh-completions)
+1. install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+
+## Terminal
+
+1. brew install --cask alacritty
+1. brew install helix
+1. brew install starship
+1. brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
+1. brew install --cask zed@preview
+1. clone this repo into $HOME/Developer and copy dotfiles into correct places
+1. install rust lang
+
+
 ## Homebrew
 
 ### Formulae
 
+- brew install gh
 - brew install bat
 - brew install eza
 - brew install oven-sh/bun/bun
