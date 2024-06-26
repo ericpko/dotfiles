@@ -1,28 +1,68 @@
 # My Dotfiles
+
 This repo contains my personal dotfiles. It probably won't be useful to anyone else.
 
-## Install
-To use this repo and my dotfiles, I followed this [guide](https://www.atlassian.com/git/tutorials/dotfiles).
+# New system install
 
-### Notes
-* Make sure .zshrc or .bashrc has:
-  - alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-* Clone dotfiles into ~/.cfg with --bare
-  - git clone --bare https://github.com/ericpko/dotfiles.git $HOME/.cfg
-* When you are in $HOME dir, you have to use:
-  - config checkout master
-  to actually bring the dotfiles into the home directory
-* A --bare repo is as if we're the remote. In the ~/.cfg repo there is the usual .git/ stuff
-* Use config from the home dir $HOME (~) as if it is git
-  - i.e. config add ..., config commit -m "", etc.
+## Terminal/Dev setup
+
+1. brew install [nerd fonts](#Fonts)
+1. install oh-my-zsh
+1. install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+1. brew install starship
+1. brew install gh
+1. brew install --cask alacritty
+1. brew install helix
+1. brew install --cask zed@preview
+1. install rust lang
+1. clone this repo into $HOME/Developer
+
+## Fonts
+
+- brew install --cask font-jetbrains-mono-nerd-font
+- brew install --cask font-meslo-lg-nerd-font
+- brew install --cask font-noto-nerd-font
+- brew install --cask font-roboto
+- brew install --cask font-roboto-mono-nerd-font
+- brew install --cask font-source-sans-3
 
 
-#### .settings
-This directory contains settings that aren't dotfiles in the home directory.
+## Homebrew
 
-* Remember to hard link the .settings/.vscode.json to the real vscode user settings file
+### Formulae
 
+- brew install bat
+- brew install eza
+- brew install oven-sh/bun/bun
+- brew install dust
+- brew install fd
+- brew install lf
+- brew install neovim (maybe)
+- brew install node (maybe)
+- brew install procs
+- brew install ripgrep
+- brew install sd
+- brew install taplo
+- brew install tlrc
+- brew install tree-sitter
+- brew install typescript
+- brew install typescript-language-server
+- brew install vscode-langservers-extracted
 
-#### .shell
-This directory contains the default shell (zsh) loading files like aliases. Use this directory
-to unclutter the dotfiles in the home dir.
+### Casks
+- brew install --cask appcleaner
+- brew install --cask chatgpt
+- brew install --cask docker
+- brew install --cask iina
+- brew install --cask maccy
+- brew install --cask raycast
+- brew install --cask shottr
+- brew install --cask thor (maybe)
+- brew install --cask vlc
+- brew install --cask transmission
+- brew install --cask warp
+- brew install --cask zoom
+- brew install --cask tradingview
+- brew install --cask hyperkey
+- brew install --cask nordvpn
+- brew install --cask ledger-live
