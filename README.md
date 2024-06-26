@@ -9,6 +9,7 @@ This repo contains my personal dotfiles. It probably won't be useful to anyone e
 1. brew install [nerd fonts](#Fonts)
 1. install oh-my-zsh
 1. install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+1. install [zsh-completions](https://github.com/zsh-users/zsh-completions)
 1. brew install starship
 1. brew install gh
 1. brew install --cask alacritty
