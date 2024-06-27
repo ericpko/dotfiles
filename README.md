@@ -6,7 +6,7 @@ This repo contains my personal dotfiles. It probably won't be useful to anyone e
 
 Install everything in the following order.
 
-## Fonts
+## [Fonts](https://gist.github.com/davidteren/898f2dcccd42d9f8680ec69a3a5d350e)
 
 - brew install --cask font-jetbrains-mono-nerd-font
 - brew install --cask font-meslo-lg-nerd-font
@@ -14,6 +14,7 @@ Install everything in the following order.
 - brew install --cask font-roboto
 - brew install --cask font-roboto-mono-nerd-font
 - brew install --cask font-source-sans-3
+- brew install --cask font-hack-nerd-font
 
 
 ## oh-my-zsh
