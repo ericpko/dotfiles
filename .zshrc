@@ -58,6 +58,7 @@ alias crr="cargo run --release"
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
+alias bup="brew update && brew doctor && brew upgrade && rustup update"
 alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 
