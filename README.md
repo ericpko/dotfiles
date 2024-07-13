@@ -53,6 +53,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install gh
 - brew install bat
 - brew install eza
+- brew install lazygit
 - brew install oven-sh/bun/bun
 - brew install dust
 - brew install fd
