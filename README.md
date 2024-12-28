@@ -75,13 +75,14 @@ Easier to just install through oh-my-zsh plugins.
 ### Casks
 - brew install --cask appcleaner
 - brew install --cask chatgpt
+- brew install --cask discord
 - brew install --cask docker
 - brew install --cask iina
 - brew install --cask maccy
 - brew install --cask raycast
 - brew install --cask shottr
 - brew install --cask thor (maybe)
-- brew install --cask vlc
+- brew install --cask vlc (maybe)
 - brew install --cask transmission
 - brew install --cask warp
 - brew install --cask zoom
