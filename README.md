@@ -38,13 +38,11 @@ Easier to just install through oh-my-zsh plugins.
 ## Terminal
 
 1. brew install --cask ghostty
-1. brew install --cask alacritty
 1. brew install helix
 1. brew install starship
 1. brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
 1. brew install --cask zed@preview
 1. clone this repo into $HOME/Developer and copy dotfiles into correct places
-1. NOTE: The dotfiles/.config/alacritty/themes subdirectory is a [separate git repo](https://github.com/alacritty/alacritty-theme).
 1. install rust lang
 
 
