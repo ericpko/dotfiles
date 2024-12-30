@@ -1,0 +1,22 @@
+# Theme
+#theme = Dark+
+theme = light:Novel,dark:Atom
+#background-opacity = 0.65
+
+# Font
+font-family = "RobotoMono Nerd Font"
+
+# Cursor
+shell-integration-features = no-cursor
+cursor-style = underline
+adjust-underline-thickness = 1
+
+# Window
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+window-height = 40
+window-width = 150
+
+# Keybinds
+keybind = super+r=reload_config
