@@ -58,6 +58,8 @@ Easier to just install through oh-my-zsh plugins.
 - brew install dust
 - brew install fd
 - brew install lf
+- After Rust is installed:
+  - brew install cargo-binstall
 - brew install neovim (maybe)
 - brew install node (maybe)
 - brew install procs
