@@ -73,6 +73,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install vscode-langservers-extracted
 
 ### Casks
+- brew install --cask zed@preview
 - brew install --cask alacritty (maybe)
   - NOTE: The dotfiles/.config/alacritty/themes subdirectory is a [separate git repo](https://github.com/alacritty/alacritty-theme).
 - brew install --cask appcleaner
