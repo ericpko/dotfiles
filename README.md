@@ -50,6 +50,7 @@ Easier to just install through oh-my-zsh plugins.
 1. install Rust
 1. brew install cargo-binstall
 1. cargo install cargo-update
+1. cargo install cargo-edit
 1. cargo install --locked bacon (new cargo-watch)
 
 
