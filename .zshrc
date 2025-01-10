@@ -57,5 +57,12 @@ alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 
+# Functions
+# usage `bre file_name`
+function bre() {
+         bacon run -- -q $1
+}
+
+
 # Starship prompt
 eval "$(starship init zsh)"
