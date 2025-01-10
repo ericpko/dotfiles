@@ -46,6 +46,13 @@ Easier to just install through oh-my-zsh plugins.
 1. install rust lang
 
 
+## Rust Language
+1. install Rust
+1. brew install cargo-binstall
+1. cargo install cargo-update
+1. cargo install --locked bacon (new cargo-watch)
+
+
 ## Homebrew
 
 ### Formulae
@@ -58,8 +65,6 @@ Easier to just install through oh-my-zsh plugins.
 - brew install dust
 - brew install fd
 - brew install lf
-- After Rust is installed:
-  - brew install cargo-binstall
 - brew install neovim (maybe)
 - brew install node (maybe)
 - brew install procs
