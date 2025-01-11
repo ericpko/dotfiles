@@ -42,8 +42,8 @@ Easier to just install through oh-my-zsh plugins.
 1. brew install starship
 1. brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
 1. brew install --cask zed@preview
+  - open zed and install the CLI so zed can be opened from the terminal.
 1. clone this repo into $HOME/Developer and copy dotfiles into correct places
-1. install rust lang
 
 
 ## Rust Language
