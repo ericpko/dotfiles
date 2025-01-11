@@ -58,9 +58,9 @@ alias path='echo -e ${PATH//:/\\n}'
 
 
 # Functions
-# usage `bre file_name`
+# usage `bre ex_file_name`
 function bre() {
-         bacon run -- -q $1
+         bacon run -- -q --example $1
 }
 
 
