@@ -54,6 +54,11 @@ Easier to just install through oh-my-zsh plugins.
 1. cargo install --locked bacon (new cargo-watch)
 
 
+## Zig Language
+- brew install zig
+- brew install zls
+
+
 ## Homebrew
 
 ### Formulae
