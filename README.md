@@ -99,3 +99,4 @@ Easier to just install through oh-my-zsh plugins.
 - brew install --cask hyperkey
 - brew install --cask nordvpn
 - brew install --cask ledger-live
+- brew install --cask hyperkey
