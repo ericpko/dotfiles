@@ -20,3 +20,5 @@ window-width = 150
 
 # Keybinds
 keybind = super+r=reload_config
+keybind = super+shift+h=previous_tab
+keybind = super+shift+l=next_tab
