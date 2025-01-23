@@ -7,7 +7,7 @@ PATH="$PATH:""$HOME"'/.bun/bin'
 
 
 # Exports
-export TERM="ghostty"
+export TERM="alacritty"
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='helix';
 export LANG='en_US.UTF-8';
@@ -49,12 +49,22 @@ alias cb="cargo build"
 alias cbr="cargo build --release"
 alias cr="cargo run"
 alias crr="cargo run --release"
+alias z="zig"
+alias zb="zig build"
+alias zbr="zig build run"
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 alias bup="brew update && brew doctor && brew upgrade && rustup update && cargo install-update -a"
 alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
+
+
+# Functions
+# usage `bre ex_file_name`
+function bre() {
+         bacon run -- -q --example $1
+}
 
 
 # Starship prompt
