@@ -64,6 +64,7 @@ Easier to just install through oh-my-zsh plugins.
 ### Formulae
 
 - brew install gh
+- brew install ollama
 - brew install bat
 - brew install eza
 - brew install lazygit
