@@ -83,6 +83,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install typescript
 - brew install typescript-language-server
 - brew install vscode-langservers-extracted
+- brew install podman
 - brew install uv
   - Python package manager written in Rust. Replaces pip, poetry, virtualenv, etc.
 
@@ -93,7 +94,6 @@ Easier to just install through oh-my-zsh plugins.
 - brew install --cask appcleaner
 - brew install --cask chatgpt
 - brew install --cask discord
-- brew install --cask docker
 - brew install --cask iina
 - brew install --cask maccy
 - brew install --cask raycast
