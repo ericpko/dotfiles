@@ -55,8 +55,11 @@ Easier to just install through oh-my-zsh plugins.
 
 
 ## Zig Language
-- brew install zig
-- brew install zls
+- Install Zig Version Manager for now [zvm](https://www.zvm.app)
+  - add zvm to .zshrc (copy everything from .profile)
+  - zvm i --zls master
+<!-- - brew install zig -->
+<!-- - brew install zls -->
 
 
 ## Homebrew
