@@ -5,9 +5,13 @@ PATH="$PATH:""$HOME"'/.cargo/bin'
 PATH="$PATH:""$HOME"'/.local/bin'
 PATH="$PATH:""$HOME"'/.bun/bin'
 
+# ZVM
+export ZVM_INSTALL="$HOME/.zvm/self"
+export PATH="$PATH:$HOME/.zvm/bin"
+export PATH="$PATH:$ZVM_INSTALL/"
 
 # Exports
-export TERM="alacritty"
+export TERM="ghostty"
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='helix';
 export LANG='en_US.UTF-8';
@@ -59,9 +63,32 @@ alias bup="brew update && brew doctor && brew upgrade && rustup update && cargo 
 alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 alias o="ollama"
+alias yay="paru"
 
 
 # Functions
+update() {
+    if [[ "$(uname -s)" == "Darwin" ]]; then
+        echo "Detected macOS. Updating with Homebrew..."
+        brew update && brew doctor && brew upgrade
+    elif [[ -f "/etc/arch-release" ]]; then
+        echo "Detected Arch Linux. Updating with paru..."
+        paru -Syu
+    elif [[ -f "/etc/debian_version" ]]; then
+        echo "Detected Ubuntu/Debian. Updating with apt..."
+        sudo apt update && sudo apt upgrade -y
+    else
+        echo "Unsupported OS."
+        return 1
+    fi
+
+    # Common updates for Rust and Zed
+    rustup update
+    cargo install-update -a
+    zvm i --zls master
+    zvm clean
+}
+
 # usage `bre ex_file_name`
 function bre() {
          bacon run -- -q --example $1
