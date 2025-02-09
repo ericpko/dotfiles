@@ -7,6 +7,11 @@ scrolloff = 5
 bufferline = "multiple"
 color-modes = true
 completion-replace = true
+cursorline = true
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+# cursor-line = "error"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -14,19 +19,16 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = false
+hidden = true
 # max-depth = 2
 
 [editor.lsp]
-# display-messages = true
 display-signature-help-docs = false
 display-inlay-hints = true
 auto-signature-help = false
 
 [keys.normal]
 # "ret" = ["open_below", "normal_mode"]
-
-# "space" = { c = "toggle_comments" }
 "space" = { c = ":buffer-close" }
 
 # C-d = ["half_page_down", "align_view_center"]
@@ -45,6 +47,14 @@ C-k = [
 
 H = ["goto_previous_buffer"]
 L = ["goto_next_buffer"]
+
+# select and deselect
+A-x = "extend_to_line_bounds"
+X = "select_line_above"
+
+[keys.select]
+A-x = "extend_to_line_bounds"
+X = "select_line_above"
 
 [keys.insert]
 j = { k = "normal_mode" }

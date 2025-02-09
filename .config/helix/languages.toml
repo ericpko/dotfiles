@@ -12,6 +12,25 @@ procMacro = { enable = true }
 
 
 [[language]]
+name = "zig"
+language-servers = ["zls"]
+
+[language-server.zls]
+# omit the following line if `zls` is in your PATH
+# command = "/path/to/zls_executable"
+# There are two ways to set config options:
+#   - edit your `zls.json` that applies to any editor that uses ZLS
+#   - set in-editor config options with the `config.<name>` fields below.
+#
+# Further information on how to configure ZLS:
+# https://zigtools.org/zls/configure/
+
+# omit the following line if `zig` is in your PATH
+# config.zig_exe_path = "/path/to/zig_executable"
+config.enable_build_on_save = true
+
+
+[[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
 auto-format = true

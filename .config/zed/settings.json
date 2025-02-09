@@ -7,13 +7,20 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "assistant": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "deepseek-r1:8b"
+    },
+    "version": "2"
+  },
   "telemetry": {
-    "metrics": true
+    "metrics": false
   },
   "theme": "Atelier Seaside Light",
   "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  // "ui_font_size": 16,
+  // "buffer_font_size": 16,
   "vim": {
     // "always": use system clipboard
     // "never": don't use system clipboard
