@@ -67,7 +67,7 @@ alias yay="paru"
 
 
 # Functions
-update() {
+up() {
     if [[ "$(uname -s)" == "Darwin" ]]; then
         echo "Detected macOS. Updating with Homebrew..."
         brew update && brew doctor && brew upgrade
