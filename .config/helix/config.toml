@@ -8,6 +8,7 @@ bufferline = "multiple"
 color-modes = true
 completion-replace = true
 cursorline = true
+true-color = true
 end-of-line-diagnostics = "hint"
 
 [editor.inline-diagnostics]
