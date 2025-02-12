@@ -41,6 +41,7 @@ Easier to just install through oh-my-zsh plugins.
 1. brew install helix
 1. brew install starship
 1. brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
+  - Maybe don't need this anymore and just use Raycast?
 1. brew install --cask zed@preview
   - open zed and install the CLI so zed can be opened from the terminal.
 1. clone this repo into $HOME/Developer and copy dotfiles into correct places
@@ -96,9 +97,10 @@ Easier to just install through oh-my-zsh plugins.
   - NOTE: The dotfiles/.config/alacritty/themes subdirectory is a [separate git repo](https://github.com/alacritty/alacritty-theme).
 - brew install --cask appcleaner
 - brew install --cask chatgpt
+- brew install --cask claude
 - brew install --cask discord
 - brew install --cask iina
-- brew install --cask maccy
+- brew install --cask maccy (included in Raycast)
 - brew install --cask raycast
 - brew install --cask shottr
 - brew install --cask thor (maybe)
@@ -107,8 +109,9 @@ Easier to just install through oh-my-zsh plugins.
 - brew install --cask warp
 - brew install --cask zoom
 - brew install --cask tradingview
-- brew install --cask hyperkey
-- brew install --cask nordvpn
+- brew install --cask hyperkey (no)
+- brew install --cask nordvpn (no)
 - brew install --cask ledger-live
-- brew install --cask hyperkey
 - brew install --cask tailscale
+- brew install --cask karabiner-elements
+- brew install --cask leader-key
