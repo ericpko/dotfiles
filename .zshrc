@@ -66,6 +66,10 @@ alias o="ollama"
 alias yay="paru"
 
 
+# gh copilot
+eval "$(gh copilot alias -- zsh)"
+
+
 # Functions
 up() {
     if [[ "$(uname -s)" == "Darwin" ]]; then
