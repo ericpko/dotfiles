@@ -90,6 +90,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install podman
 - brew install uv
   - Python package manager written in Rust. Replaces pip, poetry, virtualenv, etc.
+- brew install yazi
 
 ### Casks
 - brew install --cask zed@preview
