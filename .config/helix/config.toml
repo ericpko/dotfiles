@@ -10,9 +10,13 @@ completion-replace = true
 cursorline = true
 true-color = true
 # end-of-line-diagnostics = "hint"
+jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
+default-yank-register = '+'
 
 [editor.inline-diagnostics]
 # cursor-line = "error"
+# other-lines = "warning"
+# max-diagnostics = 2
 
 [editor.cursor-shape]
 insert = "bar"
@@ -23,14 +27,24 @@ select = "underline"
 hidden = true
 # max-depth = 2
 
+[editor.indent-guides]
+render = true
+
+[editor.soft-wrap]
+enable = true
+
 [editor.lsp]
 display-signature-help-docs = false
 display-inlay-hints = true
 auto-signature-help = false
 
+# Keybinds
 [keys.normal]
 # "ret" = ["open_below", "normal_mode"]
 "space" = { c = ":buffer-close" }
+"ret" = "goto_word"
+Cmd-j = "suspend"
+V = ["extend_line_below", "select_mode"]
 
 # C-d = ["half_page_down", "align_view_center"]
 # C-u = ["half_page_up", "align_view_center"]
@@ -52,6 +66,11 @@ L = ["goto_next_buffer"]
 # select and deselect
 A-x = "extend_to_line_bounds"
 X = "select_line_above"
+
+[keys.normal.backspace]
+c = ":buffer-close"
+y = ":yank-diagnostic"
+backspace = "suspend"
 
 [keys.select]
 A-x = "extend_to_line_bounds"
