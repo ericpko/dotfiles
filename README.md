@@ -48,6 +48,7 @@ Easier to just install through oh-my-zsh plugins.
 
 
 ## Rust Language
+
 1. install Rust
 1. brew install cargo-binstall
 1. cargo install cargo-update
@@ -56,11 +57,22 @@ Easier to just install through oh-my-zsh plugins.
 
 
 ## Zig Language
+
 - Install Zig Version Manager for now [zvm](https://www.zvm.app)
   - add zvm to .zshrc (copy everything from .profile)
   - zvm i --zls master
 <!-- - brew install zig -->
 <!-- - brew install zls -->
+
+
+## Python Language
+
+- brew install uv
+  - Python package manager written in Rust. Replaces pip, poetry, virtualenv, etc.
+- brew install ruff
+- brew install basedpyright
+  - Python LSP
+
 
 
 ## Homebrew
@@ -88,10 +100,6 @@ Easier to just install through oh-my-zsh plugins.
 - brew install typescript-language-server
 - brew install vscode-langservers-extracted
 - brew install podman
-- brew install uv
-  - Python package manager written in Rust. Replaces pip, poetry, virtualenv, etc.
-- brew install ruff
-  - Python LSP
 - brew install yazi
 
 ### Casks
