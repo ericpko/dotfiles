@@ -28,7 +28,7 @@ hidden = true
 # max-depth = 2
 
 [editor.indent-guides]
-render = true
+# render = true
 
 [editor.soft-wrap]
 enable = true
