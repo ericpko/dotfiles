@@ -99,6 +99,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install typescript
 - brew install typescript-language-server
 - brew install vscode-langservers-extracted
+- brew install tailwindcss-language-server
 - brew install podman
 - brew install yazi
 
