@@ -127,3 +127,9 @@ Easier to just install through oh-my-zsh plugins.
 - brew install --cask tailscale
 - brew install --cask karabiner-elements
 - brew install --cask leader-key
+- brew install --cask orbstack
+  - Docker alternative for Mac
+
+#### Web dev
+- brew install --cask yaak
+- brew install --cask bruno
