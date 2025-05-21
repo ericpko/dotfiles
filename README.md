@@ -104,6 +104,10 @@ Easier to just install through oh-my-zsh plugins.
 - brew install yazi
 - brew install dysk
   - Linux only
+- brew install jj
+  - git alternative written in Rust
+- brew install carapace
+  - Multi-shell multi-command argument completer written in Golang
 
 ### Casks
 - brew install --cask zed@preview
