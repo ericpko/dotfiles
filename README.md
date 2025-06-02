@@ -6,7 +6,7 @@ This repo contains my personal dotfiles. It probably won't be useful to anyone e
 
 Install everything in the following order.
 
-## [Fonts](https://gist.github.com/davidteren/898f2dcccd42d9f8680ec69a3a5d350e)
+## Fonts
 
 - brew install --cask font-sf-pro
 - brew install --cask font-jetbrains-mono-nerd-font
