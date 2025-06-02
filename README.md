@@ -16,6 +16,7 @@ Install everything in the following order.
 - brew install --cask font-roboto-mono-nerd-font
 - brew install --cask font-source-sans-3
 - brew install --cask font-hack-nerd-font
+- brew install --cask font-maple-mono-nf
 
 
 ## oh-my-zsh
