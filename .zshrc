@@ -62,6 +62,7 @@ alias vim="nvim"
 alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 alias o="ollama"
+alias gh-create='gh repo create --private --source=. --remote=origin && git push -u --all && gh browse
 
 
 # gh copilot
