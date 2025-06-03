@@ -89,7 +89,7 @@ up() {
     cargo install-update -a
     zvm i --zls master
     zvm clean
-    gh extension install github/gh-copilot
+    gh extension upgrade gh-copilot
 }
 
 # usage `bre ex_file_name`
