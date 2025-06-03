@@ -74,11 +74,11 @@ up() {
         echo "Detected macOS. Updating with Homebrew..."
         brew update && brew doctor && brew upgrade && brew cleanup && brew upgrade bun
     elif [[ -f "/etc/arch-release" ]]; then
-        echo "Detected Arch Linux. Updating with paru..."
-        paru -Syu
+        echo "Detected Arch Linux. Updating with yay..."
+        yay -Syu && bun upgrade
     elif [[ -f "/etc/debian_version" ]]; then
         echo "Detected Ubuntu/Debian. Updating with apt..."
-        sudo apt update && sudo apt upgrade -y
+        sudo apt update && sudo apt upgrade -y && bun upgrade
     else
         echo "Unsupported OS."
         return 1
