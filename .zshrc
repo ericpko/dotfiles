@@ -59,11 +59,9 @@ alias zbr="zig build run"
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
-alias bup="brew update && brew doctor && brew upgrade && brew cleanup && brew upgrade bun && rustup update && cargo install-update -a && zvm i --zls master && zvm clean"
 alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 alias o="ollama"
-alias yay="paru"
 
 
 # gh copilot
@@ -74,7 +72,7 @@ eval "$(gh copilot alias -- zsh)"
 up() {
     if [[ "$(uname -s)" == "Darwin" ]]; then
         echo "Detected macOS. Updating with Homebrew..."
-        brew update && brew doctor && brew upgrade && brew cleanup
+        brew update && brew doctor && brew upgrade && brew cleanup && brew upgrade bun
     elif [[ -f "/etc/arch-release" ]]; then
         echo "Detected Arch Linux. Updating with paru..."
         paru -Syu
@@ -91,6 +89,7 @@ up() {
     cargo install-update -a
     zvm i --zls master
     zvm clean
+    gh extension install github/gh-copilot
 }
 
 # usage `bre ex_file_name`
