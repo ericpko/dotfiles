@@ -145,3 +145,8 @@ Easier to just install through oh-my-zsh plugins.
 #### Web dev
 - brew install --cask yaak
 - brew install --cask bruno
+
+
+## Tailscale
+- [Install tailscale on Arch Linux](https://tailscale.com/kb/1036/install-arch)
+- [Set up VPS Tunneling](https://mattstein.com/thoughts/vps-ssh-tailscale/)
