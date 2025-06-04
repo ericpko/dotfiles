@@ -108,12 +108,12 @@ Easier to just install through oh-my-zsh plugins.
 - brew install tailwindcss-language-server
 - brew install podman
 - brew install yazi
-- brew install dysk
-  - Linux only
+- Linux only - dysk
 - brew install jj
   - git alternative written in Rust
 - brew install carapace
   - Multi-shell multi-command argument completer written in Golang
+- brew install sqlx-cli
 
 ### Casks
 - brew install --cask zed@preview
