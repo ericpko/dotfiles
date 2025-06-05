@@ -114,6 +114,9 @@ Easier to just install through oh-my-zsh plugins.
 - brew install carapace
   - Multi-shell multi-command argument completer written in Golang
 - brew install sqlx-cli
+- brew tap philocalyst/tap && brew install caligula
+  - TUI burning tool written in Rust
+- brew install pastel
 
 ### Casks
 - brew install --cask zed@preview
