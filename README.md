@@ -78,6 +78,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install ruff
 - brew install basedpyright
   - Python LSP
+- Keep and eye on Pyrefly vs ty for type checking
 
 
 
