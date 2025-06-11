@@ -145,6 +145,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install --cask leader-key
 - brew install --cask orbstack
   - Docker alternative for Mac
+- brew install --cask container
 
 #### Web dev
 - brew install --cask yaak
