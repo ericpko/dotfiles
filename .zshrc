@@ -62,7 +62,6 @@ alias vim="nvim"
 alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 alias o="ollama"
-alias gh-create='gh repo create --private --source=. --remote=origin && git push -u --all && gh browse
 
 
 # gh copilot
@@ -70,27 +69,44 @@ eval "$(gh copilot alias -- zsh)"
 
 
 # Functions
+run_or_exit() {
+    "$@" || {
+        echo "❌ Command failed: $*" >&2
+        return 1
+    }
+}
+
 up() {
     if [[ "$(uname -s)" == "Darwin" ]]; then
-        echo "Detected macOS. Updating with Homebrew..."
-        brew update && brew doctor && brew upgrade && brew cleanup && brew upgrade bun
+        echo "🍎 Detected macOS. Updating with Homebrew..."
+        run_or_exit brew update
+        run_or_exit brew doctor
+        run_or_exit brew upgrade
+        run_or_exit brew cleanup
+        run_or_exit brew upgrade bun
+
     elif [[ -f "/etc/arch-release" ]]; then
-        echo "Detected Arch Linux. Updating with yay..."
-        yay -Syu && bun upgrade
+        echo "🎯 Detected Arch Linux. Updating with yay..."
+        run_or_exit yay -Syu
+        run_or_exit bun upgrade
+
     elif [[ -f "/etc/debian_version" ]]; then
-        echo "Detected Ubuntu/Debian. Updating with apt..."
-        sudo apt update && sudo apt upgrade -y && bun upgrade
+        echo "🐧 Detected Ubuntu/Debian. Updating with apt..."
+        run_or_exit sudo apt update
+        run_or_exit sudo apt upgrade -y
+        run_or_exit bun upgrade
+
     else
-        echo "Unsupported OS."
+        echo "❓ Unsupported OS."
         return 1
     fi
 
-    # Common updates for Rust and Zed
-    rustup update
-    cargo install-update -a
-    zvm i --zls master
-    zvm clean
-    gh extension upgrade gh-copilot
+    echo "🦀 Updating Rust and tools..."
+    run_or_exit rustup update
+    run_or_exit cargo install-update -a
+    run_or_exit zvm i --zls master
+    run_or_exit zvm clean
+    run_or_exit gh extension upgrade gh-copilot
 }
 
 # usage `bre ex_file_name`
