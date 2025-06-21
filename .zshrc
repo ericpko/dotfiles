@@ -64,10 +64,6 @@ alias path='echo -e ${PATH//:/\\n}'
 alias o="ollama"
 
 
-# gh copilot
-eval "$(gh copilot alias -- zsh)"
-
-
 # Functions
 run_or_exit() {
     "$@" || {
@@ -114,6 +110,14 @@ function bre() {
          bacon run -- -q --example $1
 }
 
+
+# gh copilot
+eval "$(gh copilot alias -- zsh)"
+
+# ngrok
+if command -v ngrok &>/dev/null; then
+    eval "$(ngrok completion)"
+fi
 
 # Starship prompt
 eval "$(starship init zsh)"
