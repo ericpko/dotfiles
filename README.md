@@ -75,10 +75,11 @@ Easier to just install through oh-my-zsh plugins.
 
 - brew install uv
   - Python package manager written in Rust. Replaces pip, poetry, virtualenv, etc.
+- Keep an eye on Pyrefly vs ty for type checking
+  - They might replace ruff and/or basedpyright
 - brew install ruff
 - brew install basedpyright
   - Python LSP
-- Keep and eye on Pyrefly vs ty for type checking
 
 
 
