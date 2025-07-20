@@ -1,16 +1,16 @@
 theme = "fleet_dark"
 
 [editor]
-line-number = "relative"
+# line-number = "relative"
 scrolloff = 5
-# gutters = ["diagnostics"]
+gutters = ["diagnostics", "diff"]
 bufferline = "multiple"
 color-modes = true
 completion-replace = true
 cursorline = true
 true-color = true
 # end-of-line-diagnostics = "hint"
-jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
+# jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
 default-yank-register = '+'
 
 [editor.inline-diagnostics]
@@ -40,11 +40,17 @@ auto-signature-help = false
 
 # Keybinds
 [keys.normal]
-# "ret" = ["open_below", "normal_mode"]
-"space" = { c = ":buffer-close" }
+i = ["insert_mode", "collapse_selection"]
+a = ["append_mode", "collapse_selection"]
 "ret" = "goto_word"
+"f" = "expand_selection"
+"S-f" = "shrink_selection"
+"space" = { c = ":buffer-close" }
+# "f" = "goto_word"
 Cmd-j = "suspend"
 V = ["extend_line_below", "select_mode"]
+# D = ["goto_first_nonwhitespace", "extend_to_line_end"]
+D = ["ensure_selections_forward", "extend_to_line_end"]
 
 # C-d = ["half_page_down", "align_view_center"]
 # C-u = ["half_page_up", "align_view_center"]
@@ -73,8 +79,10 @@ y = ":yank-diagnostic"
 backspace = "suspend"
 
 [keys.select]
+";" = ["collapse_selection", "normal_mode"]
 A-x = "extend_to_line_bounds"
 X = "select_line_above"
 
 [keys.insert]
-j = { k = "normal_mode" }
+# j = { k = "normal_mode" }
+j = { j = "normal_mode" }

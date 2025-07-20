@@ -4,7 +4,8 @@ theme = light:Novel,dark:Atom
 #background-opacity = 0.65
 
 # Font
-font-family = "RobotoMono Nerd Font"
+font-family = "Maple Mono NF"
+# font-family = "CommitMono Nerd Font"
 
 # Cursor
 shell-integration-features = no-cursor
@@ -22,3 +23,12 @@ window-width = 150
 keybind = super+r=reload_config
 keybind = super+shift+h=previous_tab
 keybind = super+shift+l=next_tab
+# keybind = cmd+j=text:fg\n
+
+# Shaders
+custom-shader = shaders/cursor_smear.glsl
+# custom-shader = shaders/cursor_smear_fade.glsl
+# custom-shader = shaders/cursor_blaze.glsl
+# custom-shader = shaders/cursor_blaze_tapered.glsl
+# custom-shader = shaders/cursor_blaze_no_trail.glsl
+# custom-shader = shaders/manga_slash.glsl

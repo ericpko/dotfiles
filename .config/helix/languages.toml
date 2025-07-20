@@ -10,6 +10,8 @@ typing = { autoClosingAngleBrackets = { enable = true } }
 cargo = { allFeatures = true }
 procMacro = { enable = true }
 
+# [language.auto-pairs]
+# '<' = '>'
 
 [[language]]
 name = "zig"
