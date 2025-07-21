@@ -11,7 +11,7 @@ export PATH="$PATH:$HOME/.zvm/bin"
 export PATH="$PATH:$ZVM_INSTALL/"
 
 # Exports
-export TERM="ghostty"
+export TERM="xterm-ghostty"
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='helix';
 export LANG='en_US.UTF-8';
