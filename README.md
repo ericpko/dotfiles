@@ -111,6 +111,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install podman
 - brew install yazi
 - brew install just
+- brew install telnet
 - Linux only - dysk
 - brew install jj
   - git alternative written in Rust
