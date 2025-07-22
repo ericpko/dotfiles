@@ -110,6 +110,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install tailwindcss-language-server
 - brew install podman
 - brew install yazi
+- brew install just
 - Linux only - dysk
 - brew install jj
   - git alternative written in Rust
