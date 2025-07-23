@@ -43,7 +43,7 @@ Easier to just install through oh-my-zsh plugins.
 
 ## Terminal
 
-1. brew install --cask ghostty
+1. brew install --cask ghostty@tip
 1. brew install helix
 1. brew install starship
 1. brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
