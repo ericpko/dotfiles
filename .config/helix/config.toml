@@ -45,9 +45,9 @@ a = ["append_mode", "collapse_selection"]
 "ret" = "goto_word"
 "f" = "expand_selection"
 "S-f" = "shrink_selection"
-"space" = { c = ":buffer-close" }
 # "f" = "goto_word"
 Cmd-j = "suspend"
+Cmd-s = ["normal_mode", ":w"]
 V = ["extend_line_below", "select_mode"]
 # D = ["goto_first_nonwhitespace", "extend_to_line_end"]
 D = ["ensure_selections_forward", "extend_to_line_end"]
@@ -72,6 +72,10 @@ L = ["goto_next_buffer"]
 # select and deselect
 A-x = "extend_to_line_bounds"
 X = "select_line_above"
+
+[keys.normal.space]
+i = ":toggle lsp.display-inlay-hints"
+c = ":buffer-close"
 
 [keys.normal.backspace]
 c = ":buffer-close"

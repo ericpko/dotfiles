@@ -32,69 +32,28 @@ language-servers = ["zls"]
 config.enable_build_on_save = true
 
 
-[language-server.ruff]
-command = "ruff"
-args = ["server"]
-
-[[language]]
-name = "python"
-language-servers = ["basedpyright", "ruff"]
-auto-format = true
-
-
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
 auto-format = true
 
 
-[[language]]
-name = "typescript"
-language-servers = [
-  "typescript-language-server",
-  "tailwindcss-ls",
-  "vscode-eslint-language-server",
-  "emmet-language-server",
-]
-formatter = { command = 'bunx', args = ["prettier", "--parser", "typescript"] }
-indent = { tab-width = 3, unit = "   " }
-auto-format = true
-
-
-[[language]]
-name = "javascript"
-language-servers = [
-  "typescript-language-server",
-  "tailwindcss-ls",
-  "vscode-eslint-language-server",
-  "emmet-language-server",
-]
-formatter = { command = 'bunx', args = ["prettier", "--parser", "typescript"] }
-indent = { tab-width = 3, unit = "   " }
-auto-format = true
-
-
-[[language]]
-name = "json"
-language-servers = ["vscode-json-language-server"]
-formatter = { command = 'bunx', args = ["prettier", "--parser", "json"] }
-auto-format = true
-
-
+# ------------------------------------------------ Web ------------------------------------------------ 
 [[language]]
 name = "html"
 language-servers = [
   "vscode-html-language-server",
   "tailwindcss-ls",
-  "emmet-language-server",
+  # "emmet-language-server",
 ]
-formatter = { command = 'bunx', args = [
-  "prettier",
-  "--parser",
-  "html",
-  "--plugin",
-  "prettier-plugin-tailwindcss",
-] }
+# formatter = { command = "biome", args = ["format", "--write"] }
+# formatter = { command = 'bunx', args = [
+#   "prettier",
+#   "--parser",
+#   "html",
+#   "--plugin",
+#   "prettier-plugin-tailwindcss",
+# ] }
 auto-format = true
 
 
@@ -103,39 +62,71 @@ name = "css"
 language-servers = [
   "vscode-css-language-server",
   "tailwindcss-ls",
-  "emmet-language-server",
+  # "emmet-language-server",
 ]
-formatter = { command = 'bunx', args = [
-  "prettier",
-  "--parser",
-  "css",
-  "--plugin=prettier-plugin-tailwindcss",
-] }
+# formatter = { command = "biome", args = ["format", "--write"] }
+# formatter = { command = 'bunx', args = [
+#   "prettier",
+#   "--parser",
+#   "css",
+#   "--plugin=prettier-plugin-tailwindcss",
+# ] }
 auto-format = true
 
 
-[language-server.emmet-language-server]
-command = "emmet-language-server"
-args = ["--stdio"]
+# ------------------------------ Biome -----------------------------
+[language-server]
+biome = { command = "biome", args = ["lsp-proxy"] }
 
+[[language]]
+name = "javascript"
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+auto-format = true
 
-[language-server.vscode-eslint-language-server]
-command = "vscode-eslint-language-server"
-args = ["--stdio"]
+[[language]]
+name = "typescript"
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+  "tailwindcss-ls",
+]
+auto-format = true
 
+[[language]]
+name = "tsx"
+auto-format = true
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+  "tailwindcss-ls",
+]
 
-[language-server.vscode-eslint-language-server.config]
-format = true
-nodePath = ""
-onIgnoredFiles = "off"
-packageManager = "bun"
-quiet = false
-rulesCustomizations = []
-run = "onType"
-useESLintClass = false
-validate = "on"
-codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
-codeActionOnSave = { mode = "all" }
-experimental = {}
-problems = { shortenToSingleLine = false }
-workingDirectory = { mode = "auto" }
+[[language]]
+name = "jsx"
+auto-format = true
+language-servers = [
+  { name = "typescript-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+  "tailwindcss-ls",
+]
+
+[[language]]
+name = "json"
+language-servers = [
+  { name = "vscode-json-language-server", except-features = [
+    "format",
+  ] },
+  "biome",
+]
+# formatter = { command = "biome", args = ["format", "--write"] }
