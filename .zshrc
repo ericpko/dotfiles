@@ -53,7 +53,6 @@ alias cb="cargo build"
 alias cbr="cargo build --release"
 alias cr="cargo run"
 alias crr="cargo run --release"
-alias z="zig"
 alias zb="zig build"
 alias zbr="zig build run"
 alias v="nvim"
@@ -111,6 +110,8 @@ function bre() {
          bacon run -- -q --example $1
 }
 
+# zoxide
+eval "$(zoxide init zsh)"
 
 # gh copilot
 eval "$(gh copilot alias -- zsh)"

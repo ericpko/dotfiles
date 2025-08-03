@@ -121,6 +121,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew tap philocalyst/tap && brew install caligula
   - TUI burning tool written in Rust
 - brew install pastel
+- brew install zoxide
 
 ### Casks
 - brew install --cask zed@preview
