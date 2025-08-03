@@ -61,6 +61,7 @@ alias vim="nvim"
 alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 alias o="ollama"
+alias cd="z"
 
 
 # Functions
