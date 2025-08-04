@@ -23,10 +23,14 @@ window-width = 150
 keybind = super+r=reload_config
 keybind = super+left=previous_tab
 keybind = super+right=next_tab
+keybind = super+h=previous_tab
+keybind = super+l=next_tab
 keybind = ctrl+alt+cmd+shift+h=previous_tab
 keybind = ctrl+alt+cmd+shift+l=next_tab
 keybind = super+shift+h=previous_tab
 keybind = super+shift+l=next_tab
+keybind = super+shift+{=previous_tab
+keybind = super+shift+}=next_tab
 # keybind = cmd+j=text:fg\n
 
 # Shaders
