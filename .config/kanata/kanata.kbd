@@ -3,7 +3,7 @@
 )
 
 (defsrc
-  lmeta bspc caps h l
+  lmeta bspc caps h l rmeta
 )
 
 (defoverrides
@@ -17,5 +17,5 @@
 )
 
 (deflayer default
-  lmeta bspc @hyper-caps h l
+  lmeta bspc @hyper-caps h l rctl
 )
