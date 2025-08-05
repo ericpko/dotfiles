@@ -42,20 +42,15 @@ auto-signature-help = false
 [keys.normal]
 i = ["insert_mode", "collapse_selection"]
 a = ["append_mode", "collapse_selection"]
-"ret" = "goto_word"
 "f" = "expand_selection"
 "S-f" = "shrink_selection"
 # "f" = "goto_word"
-Cmd-j = "suspend"
+# Cmd-j = "suspend"
 Cmd-s = ["normal_mode", ":w"]
 V = ["extend_line_below", "select_mode"]
-# D = ["goto_first_nonwhitespace", "extend_to_line_end"]
 D = ["ensure_selections_forward", "extend_to_line_end"]
+# D = ["goto_first_nonwhitespace", "extend_to_line_end"]
 
-# C-d = ["half_page_down", "align_view_center"]
-# C-u = ["half_page_up", "align_view_center"]
-# C-b = ["page_up", "align_view_center"]
-# C-f = ["page_down", "align_view_center"]
 
 # move line up and down:
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
@@ -66,16 +61,60 @@ C-k = [
   "paste_before",
 ]
 
+# Movement & Navigation
 H = ["goto_previous_buffer"]
 L = ["goto_next_buffer"]
+Cmd-j = "page_cursor_half_down"
+Cmd-k = "page_cursor_half_up"
+"ret" = "goto_word"
+# "A-h" = "goto_line_start"         # Option+H
+# "A-l" = "goto_line_end"           # Option+L
+"A-h" = "move_prev_word_start"                          # Option+H
+"A-l" = "move_next_word_end"                            # Option+L
+"Cmd-h" = "move_prev_word_start"                        # Option+H
+"Cmd-l" = "move_next_word_end"                          # Option+L
+"A-left" = "move_prev_word_start"                       # Option+Left
+"A-right" = "move_next_word_end"                        # Option+Right
+"A-j" = "goto_next_paragraph"                           # Option+J  
+"A-k" = "goto_prev_paragraph"                           # Option+K
+"G" = ["goto_last_line", "align_view_center"]
+"g" = { "e" = ["goto_last_line", "align_view_center"] }
+# "g" = { "g" = ["goto_file_start", "align_view_center"] }
 
-# select and deselect
+# Search, select & deselect
 A-x = "extend_to_line_bounds"
 X = "select_line_above"
+# Clear search highlight (same as ;)
+"esc" = ["collapse_selection", "keep_primary_selection"]
+# Select word under cursor
+"A-w" = ["move_prev_word_start", "move_next_word_end"]
+"*" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "search_next",
+]
+# Duplicate line/selection
+"A-d" = ["extend_to_line_bounds", "yank", "paste_after"]
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
 c = ":buffer-close"
+"n" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "search_next",
+]
+"N" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "search_prev",
+]
 
 [keys.normal.backspace]
 c = ":buffer-close"
