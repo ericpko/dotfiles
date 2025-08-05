@@ -122,6 +122,9 @@ Easier to just install through oh-my-zsh plugins.
   - TUI burning tool written in Rust
 - brew install pastel
 - brew install zoxide
+- brew install kanata
+  - have to install karabiner-elements first:
+  - brew install --cask karabiner-elements
 
 ### Casks
 - brew install --cask zed@preview
