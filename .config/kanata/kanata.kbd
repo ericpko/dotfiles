@@ -3,13 +3,13 @@
 )
 
 (defsrc
-  lmeta bspc caps h l rmeta
+  lmeta bspc caps lalt h l rmeta
 )
 
 (defoverrides
   (lmeta bspc) (lalt bspc)
-  (lmeta h) (lalt left)
-  (lmeta l) (lalt rght)
+  (lalt h) (lalt left)
+  (lalt l) (lalt rght)
 )
 
 (defalias
@@ -17,5 +17,5 @@
 )
 
 (deflayer default
-  lmeta bspc @hyper-caps h l rctl
+  lmeta bspc @hyper-caps lalt h l rctl
 )
