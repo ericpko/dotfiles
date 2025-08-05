@@ -38,21 +38,93 @@ display-signature-help-docs = false
 display-inlay-hints = true
 auto-signature-help = false
 
-# Keybinds
+# ============================================================================ 
+# KEYBINDINGS - NORMAL MODE
+# ============================================================================
+
 [keys.normal]
+
+# ----------------------------------------------------------------------------
+# BASIC MOVEMENT & NAVIGATION
+# ----------------------------------------------------------------------------
+
+# Enter modes with collapsed selections
 i = ["insert_mode", "collapse_selection"]
 a = ["append_mode", "collapse_selection"]
+
+# Buffer navigation
+H = ["goto_previous_buffer"]
+L = ["goto_next_buffer"]
+
+# Page scrolling (keeps cursor position)
+Cmd-j = "page_cursor_half_down"
+Cmd-k = "page_cursor_half_up"
+"G" = ["goto_last_line", "align_view_center"]
+
+# File navigation with centering
+"g" = { "e" = ["goto_last_line", "align_view_center"] }
+# "g" = { "g" = ["goto_file_start", "align_view_center"] }
+
+# Word movement (multiple bindings for convenience)
+"A-h" = "move_prev_word_start"    # Option+H
+"A-l" = "move_next_word_start"    # Option+L  
+"Cmd-h" = "move_prev_word_start"  # Cmd+H (from kanata)
+"Cmd-l" = "move_next_word_start"  # Cmd+L (from kanata)
+"A-left" = "move_prev_word_start" # Option+Left
+"A-right" = "move_next_word_end"  # Option+Right
+
+# Alternative word movement to line start/end (commented examples):
+# "A-h" = "goto_line_start"             # Option+H to start of line
+# "A-l" = "goto_line_end"               # Option+L to end of line
+
+# Paragraph movement
+"A-j" = "goto_next_paragraph" # Option+J  
+"A-k" = "goto_prev_paragraph" # Option+K
+
+# Jump to word (enhanced f)
+"ret" = "goto_word"
+
+# ----------------------------------------------------------------------------
+# SELECTION & SEARCH
+# ----------------------------------------------------------------------------
+
+# Selection expansion/shrinking
 "f" = "expand_selection"
 "S-f" = "shrink_selection"
-# "f" = "goto_word"
-# Cmd-j = "suspend"
-Cmd-s = ["normal_mode", ":w"]
+# "f" = "goto_word"                               # Alternative: use f for goto_word instead
+
+# Line selection
 V = ["extend_line_below", "select_mode"]
-D = ["ensure_selections_forward", "extend_to_line_end"]
-# D = ["goto_first_nonwhitespace", "extend_to_line_end"]
+A-x = "extend_to_line_bounds"
+X = "select_line_above"
 
+# Word selection and search
+"A-w" = [
+  "move_prev_word_start",
+  "move_next_word_end",
+] # Select word under cursor
 
-# move line up and down:
+# Search current word (vim's * behavior)
+"*" = [
+  "move_char_right",
+  "move_prev_word_start",
+  "move_next_word_end",
+  "search_selection",
+  "search_next",
+]
+
+# Clear search highlight and collapse selections
+"esc" = ["collapse_selection", "keep_primary_selection"]
+
+# ----------------------------------------------------------------------------
+# EDITING & TEXT MANIPULATION
+# ----------------------------------------------------------------------------
+
+# Enhanced line operations
+D = ["ensure_selections_forward", "extend_to_line_end"] # Delete to end of line
+# D = ["goto_first_nonwhitespace", "extend_to_line_end"]  # Alternative: delete from first non-whitespace
+
+# Move lines up/down
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = [
   "extend_to_line_bounds",
@@ -61,46 +133,21 @@ C-k = [
   "paste_before",
 ]
 
-# Movement & Navigation
-H = ["goto_previous_buffer"]
-L = ["goto_next_buffer"]
-Cmd-j = "page_cursor_half_down"
-Cmd-k = "page_cursor_half_up"
-"ret" = "goto_word"
-# "A-h" = "goto_line_start"         # Option+H
-# "A-l" = "goto_line_end"           # Option+L
-"A-h" = "move_prev_word_start"                          # Option+H
-"A-l" = "move_next_word_end"                            # Option+L
-"Cmd-h" = "move_prev_word_start"                        # Option+H
-"Cmd-l" = "move_next_word_end"                          # Option+L
-"A-left" = "move_prev_word_start"                       # Option+Left
-"A-right" = "move_next_word_end"                        # Option+Right
-"A-j" = "goto_next_paragraph"                           # Option+J  
-"A-k" = "goto_prev_paragraph"                           # Option+K
-"G" = ["goto_last_line", "align_view_center"]
-"g" = { "e" = ["goto_last_line", "align_view_center"] }
-# "g" = { "g" = ["goto_file_start", "align_view_center"] }
-
-# Search, select & deselect
-A-x = "extend_to_line_bounds"
-X = "select_line_above"
-# Clear search highlight (same as ;)
-"esc" = ["collapse_selection", "keep_primary_selection"]
-# Select word under cursor
-"A-w" = ["move_prev_word_start", "move_next_word_end"]
-"*" = [
-  "move_char_right",
-  "move_prev_word_start",
-  "move_next_word_end",
-  "search_selection",
-  "search_next",
-]
 # Duplicate line/selection
 "A-d" = ["extend_to_line_bounds", "yank", "paste_after"]
 
+# Quick save
+Cmd-s = ["normal_mode", ":w"]
+
+# ----------------------------------------------------------------------------
+# SPACE LEADER MAPPINGS
+# ----------------------------------------------------------------------------
+
 [keys.normal.space]
-i = ":toggle lsp.display-inlay-hints"
-c = ":buffer-close"
+i = ":toggle lsp.display-inlay-hints" # Toggle inlay hints
+c = ":buffer-close"                   # Close buffer
+
+# Search word under cursor (space + n/N)
 "n" = [
   "move_char_right",
   "move_prev_word_start",
@@ -116,16 +163,31 @@ c = ":buffer-close"
   "search_prev",
 ]
 
+# ----------------------------------------------------------------------------
+# BACKSPACE LEADER MAPPINGS  
+# ----------------------------------------------------------------------------
+
 [keys.normal.backspace]
-c = ":buffer-close"
-y = ":yank-diagnostic"
-backspace = "suspend"
+c = ":buffer-close"    # Close buffer
+y = ":yank-diagnostic" # Yank diagnostic message
+backspace = "suspend"  # Suspend helix
+
+# ============================================================================
+# KEYBINDINGS - SELECT MODE
+# ============================================================================
 
 [keys.select]
-";" = ["collapse_selection", "normal_mode"]
-A-x = "extend_to_line_bounds"
-X = "select_line_above"
+";" = ["collapse_selection", "normal_mode"]   # Exit select mode
+"esc" = ["collapse_selection", "normal_mode"] # Exit select mode
+A-x = "extend_to_line_bounds"                 # Extend to line bounds
+X = "select_line_above"                       # Select line above
+
+# ============================================================================
+# KEYBINDINGS - INSERT MODE  
+# ============================================================================
 
 [keys.insert]
-# j = { k = "normal_mode" }
-j = { j = "normal_mode" }
+# Quick escape to normal mode
+j = { j = "normal_mode" } # jj to escape
+# j = { k = "normal_mode" }                    # Alternative: jk to escape
+# Cmd-j = "suspend"                            # Alternative: suspend with Cmd+j
