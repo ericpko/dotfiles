@@ -1,4 +1,4 @@
-theme = "fleet_dark"
+theme = "earl_grey"
 
 [editor]
 # line-number = "relative"
@@ -66,10 +66,10 @@ Cmd-k = "page_cursor_half_up"
 # "g" = { "g" = ["goto_file_start", "align_view_center"] }
 
 # Word movement (multiple bindings for convenience)
-"A-h" = "move_prev_word_start"    # Option+H
-"A-l" = "move_next_word_start"    # Option+L  
-"Cmd-h" = "move_prev_word_start"  # Cmd+H (from kanata)
-"Cmd-l" = "move_next_word_start"  # Cmd+L (from kanata)
+"A-h" = "move_prev_word_start" # Option+H
+"A-l" = "move_next_word_start" # Option+L  
+# "Cmd-h" = "move_prev_word_start"  # Cmd+H (from kanata)
+# "Cmd-l" = "move_next_word_start"  # Cmd+L (from kanata)
 "A-left" = "move_prev_word_start" # Option+Left
 "A-right" = "move_next_word_end"  # Option+Right
 
