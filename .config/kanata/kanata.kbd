@@ -1,0 +1,19 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  lmeta bspc caps
+)
+
+(defoverrides
+  (lmeta bspc) (lalt bspc)
+)
+
+(defalias
+  hyper-caps (tap-hold 200 200 esc (multi lctl lsft lalt lmeta))
+)
+
+(deflayer default
+  lmeta bspc @hyper-caps
+)
