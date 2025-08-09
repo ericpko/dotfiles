@@ -154,6 +154,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install --cask orbstack
   - Docker alternative for Mac
 - brew install --cask container
+- brew install --cask kindavim
 
 #### Web dev
 - brew install --cask yaak
