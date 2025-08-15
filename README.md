@@ -125,6 +125,7 @@ Easier to just install through oh-my-zsh plugins.
 - brew install kanata
   - have to install karabiner-elements first:
   - brew install --cask karabiner-elements
+- brew install fastfetch
 
 ### Casks
 - brew install --cask hyperkey
