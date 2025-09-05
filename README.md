@@ -156,6 +156,7 @@ Easier to just install through oh-my-zsh plugins.
   - Docker alternative for Mac
 - brew install --cask container
 - brew install --cask kindavim
+- brew install --cask antinote
 
 #### Web dev
 - brew install --cask yaak
