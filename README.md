@@ -15,25 +15,19 @@ Install everything in the following order.
 - brew install --cask font-roboto
 - brew install --cask font-roboto-mono-nerd-font
 - brew install --cask font-hack-nerd-font
-- brew install --cask font-maple-mono-nf
 - brew install --cask font-blex-mono-nerd-font
   - IBM Plex Mono
 - brew install --cask font-caskaydia-cove-nerd-font
   - Open Source Caskaydia Code
 - brew install --cask font-zed-mono-nerd-font
 - brew install --cask font-commit-mono-nerd-font
+- brew install --cask font-maple-mono-nf
 
 
 ## oh-my-zsh
 
-Install oh-my-zsh first, then decide if you want to install
-[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md),
-[zsh-completions](https://github.com/zsh-users/zsh-completions), and
-[zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-through homebrew on as oh-my-zsh plugin (git) installs. If you choose homebrew, read
-the homebrew page to see what needs to be added to .zshrc file.
-
-Easier to just install through oh-my-zsh plugins.
+Oh-my-zsh can be installed through homebrew or git. It's easier just to go through git and install them as plugins.
+Instructions are on the homebrew page if you decide to install through brew.
 
 1. install [oh-my-zsh](https://ohmyz.sh)
 1. install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
@@ -46,20 +40,23 @@ Easier to just install through oh-my-zsh plugins.
 1. brew install --cask ghostty@tip
 1. brew install helix
 1. brew install starship
-1. brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
-  - Maybe don't need this anymore and just use Raycast?
 1. brew install --cask zed@preview
   - open zed and install the CLI so zed can be opened from the terminal.
 1. clone this repo into $HOME/Developer and copy dotfiles into correct places
+
+- Don't need this anymore, just use raycast:
+1. brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
 
 
 ## Rust Language
 
 1. install Rust
 1. brew install cargo-binstall
-1. cargo install cargo-update
-1. cargo install cargo-edit
-1. cargo install --locked bacon (new cargo-watch)
+1. brew install cargo-update
+1. brew install cargo-edit
+1. brew install bacon
+  - this is the new cargo-watch
+1. brew install sqlx-cli
 
 
 ## Zig Language
@@ -76,10 +73,30 @@ Easier to just install through oh-my-zsh plugins.
 - brew install uv
   - Python package manager written in Rust. Replaces pip, poetry, virtualenv, etc.
 - Keep an eye on Pyrefly vs ty for type checking
-  - They might replace ruff and/or basedpyright
-- brew install ruff
-- brew install basedpyright
-  - Python LSP
+- brew install pyrefly
+  - add [pyrefly](https://pyrefly.org/en/docs/IDE/#helix) to helix
+
+
+## Web Development
+- brew install typescript
+- brew install typescript-language-server
+- brew install vscode-langservers-extracted
+- brew install tailwindcss-language-server
+- brew install --cask yaak
+- brew install --cask bruno
+
+
+## Tailscale
+- brew install --cask tailscale
+- [Install tailscale on Arch Linux](https://tailscale.com/kb/1036/install-arch)
+- [Set up VPS Tunneling](https://mattstein.com/thoughts/vps-ssh-tailscale/)
+
+
+## Containers
+- brew install --cask docker
+- brew install docker
+- brew install --cask podman-desktop
+- brew install podman
 
 
 
@@ -88,6 +105,7 @@ Easier to just install through oh-my-zsh plugins.
 ### Formulae
 
 - brew install gh
+  - gh auth login
 - brew install ollama
 - brew install bat
 - brew install eza
@@ -96,36 +114,28 @@ Easier to just install through oh-my-zsh plugins.
 - brew install dust
 - brew install fd
 - brew install lf
-- brew install neovim (maybe)
-- brew install node (maybe)
 - brew install procs
 - brew install ripgrep
 - brew install sd
 - brew install taplo
 - brew install tlrc
 - brew install tree-sitter
-- brew install typescript
-- brew install typescript-language-server
-- brew install vscode-langservers-extracted
-- brew install tailwindcss-language-server
-- brew install podman
 - brew install yazi
+- brew install zoxide
 - brew install just
 - brew install telnet
+- brew install fastfetch
 - Linux only - dysk
 - brew install jj
   - git alternative written in Rust
 - brew install carapace
   - Multi-shell multi-command argument completer written in Golang
-- brew install sqlx-cli
 - brew tap philocalyst/tap && brew install caligula
   - TUI burning tool written in Rust
 - brew install pastel
-- brew install zoxide
 - brew install kanata
   - have to install karabiner-elements first:
   - brew install --cask karabiner-elements
-- brew install fastfetch
 
 ### Casks
 - brew install --cask hyperkey
@@ -149,7 +159,6 @@ Easier to just install through oh-my-zsh plugins.
 - brew install --cask hyperkey (no)
 - brew install --cask nordvpn (no)
 - brew install --cask ledger-live
-- brew install --cask tailscale
 - brew install --cask karabiner-elements
 - brew install --cask leader-key
 - brew install --cask orbstack
@@ -158,12 +167,3 @@ Easier to just install through oh-my-zsh plugins.
 - brew install --cask kindavim
 - brew install --cask antinote
 - brew install --cask dockey
-
-#### Web dev
-- brew install --cask yaak
-- brew install --cask bruno
-
-
-## Tailscale
-- [Install tailscale on Arch Linux](https://tailscale.com/kb/1036/install-arch)
-- [Set up VPS Tunneling](https://mattstein.com/thoughts/vps-ssh-tailscale/)
