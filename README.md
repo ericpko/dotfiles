@@ -30,6 +30,8 @@ Oh-my-zsh can be installed through homebrew or git. It's easier just to go throu
 Instructions are on the homebrew page if you decide to install through brew.
 
 1. install [oh-my-zsh](https://ohmyz.sh)
+  - Consider trying carapace completions instead?
+  - brew install carapace
 1. install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 1. install [zsh-completions](https://github.com/zsh-users/zsh-completions)
 1. install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
@@ -43,9 +45,6 @@ Instructions are on the homebrew page if you decide to install through brew.
 1. brew install --cask zed@preview
   - open zed and install the CLI so zed can be opened from the terminal.
 1. clone this repo into $HOME/Developer and copy dotfiles into correct places
-
-- Don't need this anymore, just use raycast:
-1. brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
 
 
 ## Rust Language
@@ -74,10 +73,12 @@ Instructions are on the homebrew page if you decide to install through brew.
   - Python package manager written in Rust. Replaces pip, poetry, virtualenv, etc.
 - Keep an eye on Pyrefly vs ty for type checking
 - brew install pyrefly
+  - check helix --health
   - add [pyrefly](https://pyrefly.org/en/docs/IDE/#helix) to helix
 
 
 ## Web Development
+
 - brew install typescript
 - brew install typescript-language-server
 - brew install vscode-langservers-extracted
@@ -87,22 +88,55 @@ Instructions are on the homebrew page if you decide to install through brew.
 
 
 ## Tailscale
+
 - brew install --cask tailscale
 - [Install tailscale on Arch Linux](https://tailscale.com/kb/1036/install-arch)
 - [Set up VPS Tunneling](https://mattstein.com/thoughts/vps-ssh-tailscale/)
 
 
 ## Containers
+
 - brew install --cask docker
 - brew install docker
 - brew install --cask podman-desktop
 - brew install podman
+- brew install --cask orbstack
+  - Docker alternative for Mac
+- brew install --cask container
+
+
+## MacOS
+- brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
+  - Don't need this anymore, just use raycast
+- brew install kanata
+  - have to install karabiner-elements first:
+  - brew install --cask karabiner-elements
+- brew install --cask hyperkey
+- brew install --cask thor
+- brew install --cask leader-key
+- brew install --cask antinote
+- brew install --cask dockey
+- brew install --cask appcleaner
+- brew install --cask iina
+- brew install --cask maccy (included in Raycast)
+- brew install --cask raycast
+- brew install --cask transmission
+- brew install telnet
+
+
+## AI
+- brew install --cask chatgpt
+- brew install --cask claude
+- brew install codex
+- bun install -g @anthropic-ai/claude-code
+- brew install --cask warp
+- brew install --cask zed@preview
 
 
 
 ## Homebrew
 
-### Formulae
+### Command-line Tools
 
 - brew install gh
   - gh auth login
@@ -123,7 +157,6 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install yazi
 - brew install zoxide
 - brew install just
-- brew install telnet
 - brew install fastfetch
 - Linux only - dysk
 - brew install jj
@@ -132,38 +165,13 @@ Instructions are on the homebrew page if you decide to install through brew.
   - Multi-shell multi-command argument completer written in Golang
 - brew tap philocalyst/tap && brew install caligula
   - TUI burning tool written in Rust
-- brew install pastel
-- brew install kanata
-  - have to install karabiner-elements first:
-  - brew install --cask karabiner-elements
 
-### Casks
-- brew install --cask hyperkey
-- brew install --cask zed@preview
+### Applications
+
 - brew install --cask alacritty (maybe)
   - NOTE: The dotfiles/.config/alacritty/themes subdirectory is a [separate git repo](https://github.com/alacritty/alacritty-theme).
-- brew install --cask appcleaner
-- brew install --cask chatgpt
-- brew install --cask claude
 - brew install --cask discord
-- brew install --cask iina
-- brew install --cask maccy (included in Raycast)
-- brew install --cask raycast
-- brew install --cask shottr
-- brew install --cask thor (maybe)
-- brew install --cask vlc (maybe)
-- brew install --cask transmission
-- brew install --cask warp
+- brew install --cask vlc
 - brew install --cask zoom
 - brew install --cask tradingview
-- brew install --cask hyperkey (no)
-- brew install --cask nordvpn (no)
 - brew install --cask ledger-live
-- brew install --cask karabiner-elements
-- brew install --cask leader-key
-- brew install --cask orbstack
-  - Docker alternative for Mac
-- brew install --cask container
-- brew install --cask kindavim
-- brew install --cask antinote
-- brew install --cask dockey
