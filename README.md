@@ -50,6 +50,7 @@ Instructions are on the homebrew page if you decide to install through brew.
 ## Rust Language
 
 1. install Rust
+1. rustup component add rust-analyzer
 1. brew install cargo-binstall
 1. brew install cargo-update
 1. brew install cargo-edit
