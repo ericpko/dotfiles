@@ -87,15 +87,15 @@ Instructions are on the homebrew page if you decide to install through brew.
 
 ## Pi-hole
 1. Check router settings
-  - Go to DHCP Server and set the Pi-hole to a static IP address
-  - Set the primary DNS to the pihole and secondary DNS to Cloudflare 1.1.1.1
-  - Change the Router's Primary DNS to Cloudflare and secondary to whatever
-1. Install Pi-hole
-1. Set up auto updates for OS and Pi-hole
-1. Install tailscale
-  - [Tailscale guide](https://tailscale.com/kb/1114/pi-hole)
-1. Install ufw
-
+    - Go to DHCP Server and set the Pi-hole to a static IP address
+    - Set the primary DNS to the pihole and secondary DNS to Cloudflare 1.1.1.1
+    - Change the Router's Primary DNS to Cloudflare and secondary to whatever
+2. Install Pi-hole
+3. Set up auto updates for OS and Pi-hole
+    - See Claude chat for more details
+4. Install tailscale on Raspberry Pi
+    - [Tailscale guide](https://tailscale.com/kb/1114/pi-hole)
+5. Install ufw on Raspberry Pi
 ```bash
 # Install UFW
 sudo apt install ufw
@@ -115,8 +115,7 @@ sudo ufw default allow outgoing
 # Enable firewall
 sudo ufw enable
 ```
-
-1. Permit all orgins on Pi-hole dashboard
+6. Permit all orgins on Pi-hole dashboard
 
 
 ## Containers
