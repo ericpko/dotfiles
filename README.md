@@ -79,6 +79,36 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install --cask bruno
 
 
+## VPS
+1. Create new user
+1. Add user to groups
+1. Install tailscale
+    - Start tailscale and authenticate
+    - Make sure tailscale starts on boot up
+1. Install ufw
+```bash
+# Reset UFW to default state (if needed)
+sudo ufw --force reset
+
+# Set default policies
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+# Allow HTTP and HTTPS
+sudo ufw allow http
+sudo ufw allow https
+
+# Allow all traffic on Tailscale interface
+sudo ufw allow in on tailscale0
+
+# Enable UFW
+sudo ufw enable
+
+# Check status
+sudo ufw status verbose
+```
+
+
 ## Tailscale
 - brew install --cask tailscale
 - [Install tailscale on Arch Linux](https://tailscale.com/kb/1036/install-arch)
