@@ -175,6 +175,7 @@ sudo ufw enable
 - brew install --cask raycast
 - brew install --cask transmission
 - brew install telnet
+- brew install --cask antinote
 
 
 ## AI
