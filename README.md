@@ -180,8 +180,8 @@ sudo ufw enable
 
 ## AI
 - brew install --cask chatgpt
+- brew install --cask codex
 - brew install --cask claude
-- brew install codex
 - bun install -g @anthropic-ai/claude-code
 - brew install --cask warp
 - brew install --cask zed@preview
