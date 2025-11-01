@@ -13,6 +13,16 @@ procMacro = { enable = true }
 # [language.auto-pairs]
 # '<' = '>'
 
+
+[language-server.pyrefly]
+command = "pyrefly"
+args = ["lsp"]
+
+[[language]]
+name = "python"
+language-servers = ["pyrefly"]
+
+
 [[language]]
 name = "zig"
 language-servers = ["zls"]
