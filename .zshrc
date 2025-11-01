@@ -11,7 +11,7 @@ export PATH="$PATH:$HOME/.zvm/bin"
 export PATH="$PATH:$ZVM_INSTALL/"
 
 # Exports
-export TERM="xterm-ghostty"
+# export TERM="xterm-ghostty"
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='helix';
 export LANG='en_US.UTF-8';
@@ -100,9 +100,8 @@ up() {
     echo "🦀 Updating Rust and tools..."
     run_or_exit rustup update
     run_or_exit cargo install-update -a
-    run_or_exit zvm i --zls master
-    run_or_exit zvm clean
-    run_or_exit gh extension upgrade gh-copilot
+    # run_or_exit zvm i --zls master
+    # run_or_exit zvm clean
     run_or_exit claude update
 }
 
@@ -113,14 +112,6 @@ function bre() {
 
 # zoxide
 eval "$(zoxide init zsh)"
-
-# gh copilot
-eval "$(gh copilot alias -- zsh)"
-
-# ngrok
-if command -v ngrok &>/dev/null; then
-    eval "$(ngrok completion)"
-fi
 
 # Starship prompt
 eval "$(starship init zsh)"
