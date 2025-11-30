@@ -13,7 +13,6 @@ procMacro = { enable = true }
 # [language.auto-pairs]
 # '<' = '>'
 
-
 [language-server.pyrefly]
 command = "pyrefly"
 args = ["lsp"]
@@ -21,7 +20,6 @@ args = ["lsp"]
 [[language]]
 name = "python"
 language-servers = ["pyrefly"]
-
 
 [[language]]
 name = "zig"
@@ -41,11 +39,16 @@ language-servers = ["zls"]
 # config.zig_exe_path = "/path/to/zig_executable"
 config.enable_build_on_save = true
 
-
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
 auto-format = true
+
+[[language]]
+name = "typst"
+
+auto-format = true
+formatter.command = "typstyle"
 
 
 # ------------------------------------------------ Web ------------------------------------------------ 
@@ -65,7 +68,6 @@ language-servers = [
 #   "prettier-plugin-tailwindcss",
 # ] }
 auto-format = true
-
 
 [[language]]
 name = "css"
