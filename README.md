@@ -218,6 +218,11 @@ sudo ufw enable
   - Multi-shell multi-command argument completer written in Golang
 - brew tap philocalyst/tap && brew install caligula
   - TUI burning tool written in Rust
+- Typst
+  - brew install tinymist
+  - brew install typstyle
+  - [Zathura](https://github.com/homebrew-zathura/homebrew-zathura) is a pdf viewer in the terminal
+
 
 ### Applications
 - brew install --cask alacritty (maybe)
