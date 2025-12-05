@@ -17,6 +17,11 @@ input {
         numlock // Enable numlock on startup
     }
 
+    mouse {
+        // accel-speed 0.0
+        accel-profile "flat"
+    }
+
     touchpad {
         tap // Enable tap-to-click
         natural-scroll // Enable natural (macOS-style) scrolling
@@ -50,10 +55,11 @@ binds {
     MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
+    MOD+RETURN                          hotkey-overlay-title="Open Terminal: ghostty" { spawn-sh "ghostty"; }
     // MOD+SPACE                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "wofi"; }
-    MOD+SPACE                           hotkey-overlay-title="Open App Launcher: quickshell" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
-    MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
+    Mod+SPACE                           hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    // MOD+SPACE                           hotkey-overlay-title="Open App Launcher: quickshell" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    MOD+B                               hotkey-overlay-title="Open Browser: Helium" { spawn-sh "helium-browser"; }
     SUPER+L                             hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
     
     // Please choose your own file manager
