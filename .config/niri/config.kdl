@@ -56,9 +56,7 @@ binds {
 
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: ghostty" { spawn-sh "ghostty"; }
-    // MOD+SPACE                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "wofi"; }
     Mod+SPACE                           hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    // MOD+SPACE                           hotkey-overlay-title="Open App Launcher: quickshell" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     MOD+B                               hotkey-overlay-title="Open Browser: Helium" { spawn-sh "helium-browser"; }
     SUPER+L                             hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
     
@@ -190,7 +188,9 @@ binds {
 
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
     spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
-    spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
+    // spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
+    spawn-sh-at-startup "swww img /home/eric/Pictures/Wallpapers/wallhaven-yqxzqx.jpg" // Set wallpaper
+
     // spawn-sh-at-startup "waybar" // Launch waybar
     spawn-at-startup "qs" "-c" "noctalia-shell"
 
