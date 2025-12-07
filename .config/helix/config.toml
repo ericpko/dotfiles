@@ -62,8 +62,7 @@ Cmd-k = "page_cursor_half_up"
 "G" = ["goto_last_line", "align_view_center"]
 
 # File navigation with centering
-"g" = { "e" = ["goto_last_line", "align_view_center"] }
-# "g" = { "g" = ["goto_file_start", "align_view_center"] }
+# "g" = { "e" = ["goto_last_line", "align_view_center"] }
 
 # Word movement (multiple bindings for convenience)
 "A-h" = "move_prev_word_start" # Option+H
@@ -191,3 +190,15 @@ X = "select_line_above"                       # Select line above
 j = { j = "normal_mode" } # jj to escape
 # j = { k = "normal_mode" }                    # Alternative: jk to escape
 # Cmd-j = "suspend"                            # Alternative: suspend with Cmd+j
+
+# ----------------------------------------------------------------------------
+# MOVEMENT & NAVIGATION
+# ----------------------------------------------------------------------------
+
+[keys.normal.g]
+# Page scrolling
+j = ["page_cursor_half_down"]
+k = ["page_cursor_half_up"]
+
+# File navigation with centering
+e = ["goto_last_line", "align_view_center"]
