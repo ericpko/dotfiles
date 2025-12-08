@@ -209,6 +209,7 @@ binds {
 
 layout {
     gaps 16 // Gap between windows
+    always-center-single-column
     center-focused-column "never" // Don’t auto-center focused column
 
     preset-column-widths {
@@ -296,3 +297,4 @@ environment {
 hotkey-overlay {
     skip-at-startup
 }
+include "./noctalia.kdl"
