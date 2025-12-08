@@ -52,6 +52,13 @@ cursor {
 // ────────────── Keybindings ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
 
+recent-windows {
+    binds {
+        Mod+Tab                             { next-window; }
+        Mod+Shift+Tab                       { previous-window; }
+    }
+}
+
 binds {
     Mod+Shift+Slash                      { show-hotkey-overlay; }
     MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
@@ -157,7 +164,7 @@ binds {
     MOD+SHIFT+8                          { move-column-to-workspace 8; }
     MOD+SHIFT+9                          { move-column-to-workspace 9; }
 
-    MOD+TAB                             { focus-workspace-previous; }
+    // MOD+TAB                             { focus-workspace-previous; }
 
     // ─── Layout Controls ───
     MOD+C                               { center-column; }
