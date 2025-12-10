@@ -1,5 +1,7 @@
 # Theme
-theme = noctalia
+# theme = Dark+
+theme = light:Novel,dark:Atom
+# theme = noctalia
 #background-opacity = 0.65
 
 # Font
