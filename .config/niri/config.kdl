@@ -63,6 +63,10 @@ binds {
     Mod+Shift+Slash                      { show-hotkey-overlay; }
     MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
 
+    // TODO: Maybe remove these
+    Mod+Shift+C { spawn "sh" "-c" "env DISPLAY=:0 xsel -ob | wl-copy"; }
+    Mod+Shift+V { spawn "sh" "-c" "wl-paste -n | env DISPLAY=:0 xsel -ib"; }
+
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: ghostty" { spawn-sh "ghostty"; }
     Mod+SPACE                           hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
@@ -86,6 +90,7 @@ binds {
 
     // ─── Window Movement and Focus ───
     MOD+Q                               { close-window; }
+    MOD+W                               { close-window; }
 
     MOD+LEFT                            { focus-column-left; }
     MOD+H                               { focus-column-left; }
@@ -179,7 +184,7 @@ binds {
     // ─── Modes ───
     MOD+T                               { toggle-window-floating; }
     MOD+SHIFT+F                         { fullscreen-window; }
-    MOD+W                               { toggle-column-tabbed-display; }
+    // MOD+W                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
     CTRL+SHIFT+1                        { screenshot; }
@@ -203,10 +208,14 @@ binds {
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
     spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
     // spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
-    spawn-sh-at-startup "swww img /home/eric/Pictures/Wallpapers/wallhaven-yqxzqx.jpg" // Set wallpaper
+    // spawn-sh-at-startup "swww img /home/eric/Pictures/Wallpapers/wallhaven-yqxzqx.jpg" // Set wallpaper
 
-    // spawn-sh-at-startup "waybar" // Launch waybar
     spawn-at-startup "qs" "-c" "noctalia-shell"
+
+    spawn-at-startup "swayidle" "-w" \
+        "timeout" "300" "niri msg action power-off-monitors" \
+        "timeout" "600" "systemctl suspend" \
+        "before-sleep" "swaylock -f"
 
     prefer-no-csd // Disable program decorations
     screenshot-path null // Disable screenshot saving
