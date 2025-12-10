@@ -1,6 +1,5 @@
 # Theme
-#theme = Dark+
-theme = light:Novel,dark:Atom
+theme = noctalia
 #background-opacity = 0.65
 
 # Font
@@ -11,6 +10,7 @@ font-family = "Maple Mono NF"
 shell-integration-features = no-cursor
 cursor-style = underline
 adjust-underline-thickness = 1
+mouse-hide-while-typing = true
 
 # ssh
 shell-integration-features = ssh-terminfo
