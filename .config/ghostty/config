@@ -1,7 +1,5 @@
 # Theme
-# theme = Dark+
-theme = light:Novel,dark:Atom
-# theme = noctalia
+theme = noctalia
 #background-opacity = 0.65
 
 # Font
@@ -38,6 +36,9 @@ keybind = super+shift+l=next_tab
 keybind = super+shift+{=previous_tab
 keybind = super+shift+}=next_tab
 # keybind = cmd+j=text:fg\n
+
+# delete previous word on linux with ctrl+backspace or command+backspace
+# keybind = ctrl+backspace=text:\x1b\x7f
 
 # Shaders
 custom-shader = shaders/cursor_smear.glsl
