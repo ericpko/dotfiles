@@ -222,6 +222,7 @@ sudo ufw enable
   - brew install tinymist
   - brew install typstyle
   - [Zathura](https://github.com/homebrew-zathura/homebrew-zathura) is a pdf viewer in the terminal
+- brew install frpc
 
 
 ### Applications
