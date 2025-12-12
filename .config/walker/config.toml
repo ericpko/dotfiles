@@ -1,0 +1,32 @@
+# Walker Configuration
+theme = "noctalia"
+
+# [placeholders]
+# default.input = "Search"
+# default.list = "No Results"
+
+[keybinds]
+activate = ["Return"]
+
+# Configure provider prefixes - this is the key part!
+# [[providers.prefixes]]
+# provider = "symbols"
+# prefix = ":"
+
+# [[providers.prefixes]]
+# provider = "windows"
+# prefix = "w:"
+
+# [[providers.prefixes]]
+# provider = "clipboard"
+# prefix = "c:"
+
+# [[providers.prefixes]]
+# provider = "files"
+# prefix = "f:"
+
+# Desktop applications run without a prefix (default)
+# You can also explicitly set it:
+# [[providers.prefixes]]
+# provider = "windows"
+# prefix = ""

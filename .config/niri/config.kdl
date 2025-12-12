@@ -68,13 +68,14 @@ binds {
     Mod+Shift+V { spawn "sh" "-c" "wl-paste -n | env DISPLAY=:0 xsel -ib"; }
 
     // ─── Applications ───
-    MOD+RETURN                          hotkey-overlay-title="Open Terminal: ghostty" { spawn-sh "ghostty"; }
-    Mod+SPACE                           hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    MOD+B                               hotkey-overlay-title="Open Browser: Helium" { spawn-sh "helium-browser"; }
-    SUPER+L                             hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
+    MOD+RETURN                          hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty"; }
+    Mod+SPACE                           hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
+    Mod+D                               hotkey-overlay-title="Switch active Window: walker" { spawn "walker" "--provider" "windows"; }
+    MOD+B                               hotkey-overlay-title="Open Browser: Helium" { spawn "helium-browser"; }
+    SUPER+L                             hotkey-overlay-title="Lock Screen: swaylock" { spawn "swaylock"; }
     
     // Please choose your own file manager
-    MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
+    MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
 
     // ─── Audio Controls ───
     // Example volume keys mappings for PipeWire & WirePlumber.
@@ -206,11 +207,13 @@ binds {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
-    spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
+    // spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
     // spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
     // spawn-sh-at-startup "swww img /home/eric/Pictures/Wallpapers/wallhaven-yqxzqx.jpg" // Set wallpaper
 
     spawn-at-startup "qs" "-c" "noctalia-shell"
+
+    spawn-at-startup "walker" "--gapplication-service"
 
     spawn-at-startup "swayidle" "-w" \
         "timeout" "300" "niri msg action power-off-monitors" \

@@ -1,0 +1,10 @@
+# Enable window integration - focus existing windows
+window_integration = true
+score_open_windows = false
+history = true
+
+# Add aliases - maps search terms to app identifiers
+# When you type "hel", Helium will always be first
+[aliases]
+"hel" = "helium"
+"helium" = "helium"
