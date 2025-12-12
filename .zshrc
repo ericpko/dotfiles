@@ -13,7 +13,9 @@ export PATH="$PATH:$ZVM_INSTALL/"
 # Exports
 # export TERM="xterm-ghostty"
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR='helix';
+# Use 'hx' on MacOS and 'helix' on Linux
+export EDITOR='hx';
+# export EDITOR='helix';
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 export MANPAGER='less -X';
@@ -62,6 +64,7 @@ alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 alias o="ollama"
 alias cd="z"
+alias y="yazi"
 
 
 # Functions
