@@ -37,8 +37,13 @@ keybind = super+shift+{=previous_tab
 keybind = super+shift+}=next_tab
 # keybind = cmd+j=text:fg\n
 
-# delete previous word on linux with ctrl+backspace or command+backspace
-# keybind = ctrl+backspace=text:\x1b\x7f
+# delete previous word on linux with ctrl+backspace
+keybind = ctrl+backspace=text:\x1b\x7f
+
+# Linux issues -- trying to make it like MacOS with cmd+backspace and opt+backspace
+# keybind = alt+backspace=text:\x15
+keybind = shift+home>backspace=text:\x15
+keybind = super+backspace=text:\x17
 
 # Shaders
 custom-shader = shaders/cursor_smear.glsl
