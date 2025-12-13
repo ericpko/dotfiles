@@ -65,7 +65,7 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install ripgrep
 - brew install sd
 - brew install taplo
-- brew install tlrc
+- brew install tealdeer
 - brew install tree-sitter
 - brew install yazi
 - brew install zoxide
