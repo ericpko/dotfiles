@@ -126,10 +126,22 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install --cask antinote
 
 
-### Linux
+### Niri/Linux
 - yay keyd
 - fix ghostty terminfo
   - this might be fixed in Linux by default in the future
+- paru niri-switch
+- choose a launcher:
+  - walker
+    - install elephant bin first and all the providers as bin as well
+  - anyrun
+  - fuzzel
+  - vicinae
+  - rofi
+- yay stasis
+- [niri animations](https://github.com/XansiVA/nirimation)
+- yay impala
+- yay bluetui
 
 
 ## Languages
@@ -242,3 +254,4 @@ sudo ufw enable
 - brew install --cask orbstack
   - Docker alternative for Mac
 - brew install --cask container
+- brew install jesseduffield/lazydocker/lazydocker
