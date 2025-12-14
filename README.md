@@ -57,6 +57,7 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install bat
 - brew install eza
 - brew install lazygit
+- brew install lazydocker
 - brew install oven-sh/bun/bun
 - brew install dust
 - brew install fd
@@ -67,10 +68,13 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install taplo
 - brew install tealdeer
 - brew install tree-sitter
+- brew install fzf
 - brew install yazi
 - brew install zoxide
 - brew install just
 - brew install fastfetch
+- brew install bottom
+  - brew install btop
 - Linux only - dysk
 - brew install jj
   - git alternative written in Rust
@@ -84,17 +88,16 @@ Instructions are on the homebrew page if you decide to install through brew.
   - [Zathura](https://github.com/homebrew-zathura/homebrew-zathura) is a pdf viewer in the terminal
 - brew install frpc
 - brew install zellij
-- yay keyd
 
 
 ### Applications
 - brew install --cask alacritty (maybe)
   - NOTE: The dotfiles/.config/alacritty/themes subdirectory is a [separate git repo](https://github.com/alacritty/alacritty-theme).
 - brew install --cask discord
-- brew install --cask vlc
 - brew install --cask zoom
 - brew install --cask tradingview
 - brew install --cask ledger-live
+- brew install --cask typora@dev
 
 
 ### AI
@@ -127,6 +130,7 @@ Instructions are on the homebrew page if you decide to install through brew.
 
 
 ### Niri/Linux
+[Awesome niri](https://github.com/Vortriz/awesome-niri)
 - yay keyd
 - fix ghostty terminfo
   - this might be fixed in Linux by default in the future
@@ -142,6 +146,9 @@ Instructions are on the homebrew page if you decide to install through brew.
 - [niri animations](https://github.com/XansiVA/nirimation)
 - yay impala
 - yay bluetui
+- paru mpv
+- yay zathura
+  - install zathura mupdf as well
 
 
 ## Languages

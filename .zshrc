@@ -66,6 +66,7 @@ alias o="ollama"
 alias cd="z"
 alias y="yazi"
 alias ff="fzf"
+alias top="btm"
 
 
 # Functions
