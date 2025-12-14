@@ -149,6 +149,8 @@ Instructions are on the homebrew page if you decide to install through brew.
 - paru mpv
 - yay zathura
   - install zathura mupdf as well
+- yay cider
+  - check email for code
 
 
 ## Languages
