@@ -65,6 +65,7 @@ alias path='echo -e ${PATH//:/\\n}'
 alias o="ollama"
 alias cd="z"
 alias y="yazi"
+alias ff="fzf"
 
 
 # Functions
