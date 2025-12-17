@@ -173,6 +173,7 @@ binds {
     // MOD+TAB                             { focus-workspace-previous; }
 
     // ─── Layout Controls ───
+    Mod+R                               { switch-preset-column-width; }
     MOD+C                               { center-column; }
     MOD+CTRL+C                          { center-visible-columns; }
     Mod+F                               { maximize-column; }
@@ -236,6 +237,8 @@ layout {
         proportion 0.5
         proportion 0.66667
     }
+
+    default-column-width { proportion 0.5; }
 
     focus-ring {
         width 3
