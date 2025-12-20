@@ -67,6 +67,20 @@ alias cd="z"
 alias y="yazi"
 alias ff="fzf"
 alias top="btm"
+# Set aliases based on OS
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # macOS (Homebrew)
+  alias s='brew search'
+  alias i='brew install'
+  alias r='brew uninstall'
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  # Arch Linux (paru)
+  alias s='paru -Ss'
+  alias i='paru -S'
+  alias r='paru -Rs'
+  alias u='paru -Syu'
+  alias c='paru -Sc --noconfirm && paru -c --noconfirm'
+fi
 
 
 # Functions
