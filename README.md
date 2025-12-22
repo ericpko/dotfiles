@@ -72,6 +72,7 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install yazi
 - brew install zoxide
 - brew install just
+- brew install atuin
 - brew install fastfetch
 - brew install bottom
   - brew install btop
