@@ -98,9 +98,11 @@ binds {
     MOD+RIGHT                           { focus-column-right; }
     MOD+L                               { focus-column-right; }
     // MOD+UP                              { focus-window-up; }
-    // MOD+K                               { focus-window-up; }
     // MOD+DOWN                            { focus-window-down; }
+    SUPER+J                               { focus-window-down; }
+    SUPER+K                               { focus-window-up; }
     // MOD+J                               { focus-window-down; }
+    // MOD+K                               { focus-window-up; }
     MOD+J                               { focus-workspace-down; }
     MOD+K                               { focus-workspace-up; }
     MOD+SHIFT+J                         { move-column-to-workspace-down; }
@@ -182,6 +184,10 @@ binds {
     MOD+EQUAL                           { set-column-width "+10%"; }
     MOD+SHIFT+MINUS                     { set-window-height "-10%"; }
     MOD+SHIFT+EQUAL                     { set-window-height "+10%"; }
+    MOD+Comma                           { consume-or-expel-window-left; }
+    MOD+Period                          { consume-or-expel-window-right; }
+    SUPER+Comma                         { consume-or-expel-window-left; }
+    SUPER+Period                        { consume-or-expel-window-right; }
 
     // ─── Modes ───
     MOD+T                               { toggle-window-floating; }
