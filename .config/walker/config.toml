@@ -30,3 +30,6 @@ activate = ["Return"]
 # [[providers.prefixes]]
 # provider = "windows"
 # prefix = ""
+
+[providers]
+empty = []
