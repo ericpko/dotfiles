@@ -28,7 +28,7 @@ input {
     }
 
     focus-follows-mouse // Automatically focus windows under the mouse pointer
-    workspace-auto-back-and-forth // Enable workspace back & forth switching
+    // workspace-auto-back-and-forth // Enable workspace back & forth switching
 }
 
 // ────────────── Cursor Configuration ──────────────
@@ -63,10 +63,6 @@ binds {
     Mod+Shift+Slash                      { show-hotkey-overlay; }
     MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
 
-    // TODO: Maybe remove these
-    Mod+Shift+C { spawn "sh" "-c" "env DISPLAY=:0 xsel -ob | wl-copy"; }
-    Mod+Shift+V { spawn "sh" "-c" "wl-paste -n | env DISPLAY=:0 xsel -ib"; }
-
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty"; }
     Mod+SPACE                           hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
@@ -91,7 +87,7 @@ binds {
 
     // ─── Window Movement and Focus ───
     MOD+Q                               { close-window; }
-    MOD+W                               { close-window; }
+    // MOD+W                               { close-window; }
 
     MOD+LEFT                            { focus-column-left; }
     MOD+H                               { focus-column-left; }
@@ -190,9 +186,9 @@ binds {
     SUPER+Period                        { consume-or-expel-window-right; }
 
     // ─── Modes ───
-    MOD+T                               { toggle-window-floating; }
+    MOD+W                               { toggle-window-floating; }
     MOD+SHIFT+F                         { fullscreen-window; }
-    // MOD+W                               { toggle-column-tabbed-display; }
+    MOD+T                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
     CTRL+SHIFT+1                        { screenshot; }
@@ -241,7 +237,7 @@ layout {
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
-        proportion 0.66667
+        // proportion 0.66667
     }
 
     default-column-width { proportion 0.5; }
