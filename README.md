@@ -152,6 +152,9 @@ Instructions are on the homebrew page if you decide to install through brew.
   - install zathura mupdf as well
 - yay cider
   - check email for code
+- Choose an idle manager:
+  - [stasis](https://github.com/saltnpepper97/stasis)
+  - swayidle
 
 
 ## Languages
