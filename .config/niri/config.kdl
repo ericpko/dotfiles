@@ -220,8 +220,10 @@ binds {
 
     spawn-at-startup "swayidle" "-w" \
         "timeout" "300" "niri msg action power-off-monitors" \
+        "resume" "niri msg action power-on-monitors" \
         "timeout" "600" "systemctl suspend" \
-        "before-sleep" "swaylock -f"
+        "before-sleep" "swaylock -f" \
+        "after-resume" "niri msg action power-on-monitors"
 
     prefer-no-csd // Disable program decorations
     screenshot-path null // Disable screenshot saving
@@ -299,6 +301,11 @@ animations {
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true // Always float Firefox PiP windows
+}
+
+window-rule {
+    match app-id="org.gnome.Calculator"
+    open-floating true
 }
 
 window-rule {
