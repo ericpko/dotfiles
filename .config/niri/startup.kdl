@@ -1,0 +1,38 @@
+// ────────────── Startup Applications ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
+
+spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
+// spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
+// spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
+// spawn-sh-at-startup "swww img /home/eric/Pictures/Wallpapers/wallhaven-yqxzqx.jpg" // Set wallpaper
+
+spawn-at-startup "qs" "-c" "noctalia-shell"
+
+spawn-at-startup "walker" "--gapplication-service"
+
+spawn-at-startup "swayidle" "-w" \
+    "timeout" "300" "niri msg action power-off-monitors" \
+    "resume" "niri msg action power-on-monitors" \
+    "timeout" "600" "systemctl suspend" \
+    "before-sleep" "swaylock -f" \
+    "after-resume" "niri msg action power-on-monitors"
+
+// ────────────── Preferences ──────────────
+prefer-no-csd // Disable program decorations
+screenshot-path null // Disable screenshot saving
+
+// ────────────── Environment Variables ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#environment
+
+environment {
+    DISPLAY ":1"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORM "wayland"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    XDG_SESSION_TYPE "wayland"
+    XDG_CURRENT_DESKTOP "niri"
+}
+
+hotkey-overlay {
+    skip-at-startup
+}

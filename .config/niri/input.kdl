@@ -1,0 +1,37 @@
+// ────────────── Input Configuration ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+
+input {
+    mod-key "Alt"
+    mod-key-nested "Super"
+    keyboard {
+        xkb {
+            layout "us" // Use the German keyboard layout
+            options "caps:escape"
+        }
+        repeat-delay 200
+        repeat-rate 40
+        numlock // Enable numlock on startup
+    }
+
+    mouse {
+        // accel-speed 0.0
+        accel-profile "flat"
+    }
+
+    touchpad {
+        tap // Enable tap-to-click
+        natural-scroll // Enable natural (macOS-style) scrolling
+    }
+
+    focus-follows-mouse // Automatically focus windows under the mouse pointer
+    // workspace-auto-back-and-forth // Enable workspace back & forth switching
+}
+
+// ────────────── Cursor Configuration ──────────────
+cursor {
+    xcursor-theme "capitaine-cursors"
+    // xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 48
+    hide-when-typing
+}
