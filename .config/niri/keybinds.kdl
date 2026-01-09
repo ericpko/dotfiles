@@ -135,6 +135,8 @@ binds {
 
     // Display modes
     MOD+SHIFT+F                         { fullscreen-window; }
+    MOD+V                               { toggle-window-floating; }
+    MOD+SHIFT+V                         { switch-focus-between-floating-and-tiling; }
     // MOD+W                               { toggle-window-floating; }
     // MOD+T                               { toggle-column-tabbed-display; }
 
