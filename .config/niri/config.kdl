@@ -66,9 +66,9 @@ binds {
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty"; }
     Mod+SPACE                           hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
-    Mod+D                               hotkey-overlay-title="Switch active Window: walker" { spawn "walker" "--provider" "windows"; }
+    // Mod+D                               hotkey-overlay-title="Switch active Window: walker" { spawn "walker" "--provider" "windows"; }
     MOD+B                               hotkey-overlay-title="Open Browser: Helium" { spawn "helium-browser"; }
-    SUPER+L                             hotkey-overlay-title="Lock Screen: swaylock" { spawn "swaylock"; }
+    // SUPER+L                             hotkey-overlay-title="Lock Screen: swaylock" { spawn "swaylock"; }
     
     // Please choose your own file manager
     MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
@@ -186,9 +186,9 @@ binds {
     SUPER+Period                        { consume-or-expel-window-right; }
 
     // ─── Modes ───
-    MOD+W                               { toggle-window-floating; }
+    // MOD+W                               { toggle-window-floating; }
     MOD+SHIFT+F                         { fullscreen-window; }
-    MOD+T                               { toggle-column-tabbed-display; }
+    // MOD+T                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
     CTRL+SHIFT+1                        { screenshot; }

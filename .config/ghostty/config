@@ -29,12 +29,17 @@ keybind = super+left=previous_tab
 keybind = super+right=next_tab
 keybind = super+h=previous_tab
 keybind = super+l=next_tab
-keybind = ctrl+alt+cmd+shift+h=previous_tab
-keybind = ctrl+alt+cmd+shift+l=next_tab
-keybind = super+shift+h=previous_tab
-keybind = super+shift+l=next_tab
-keybind = super+shift+{=previous_tab
-keybind = super+shift+}=next_tab
+keybind = alt+t=new_tab
+keybind = super+t=new_tab
+keybind = alt+h=previous_tab
+keybind = alt+l=next_tab
+keybind = alt+w=close_tab
+keybind = super+w=close_tab
+# keybind = alt+d=new_split:auto
+keybind = alt+d=new_split:right
+keybind = alt+shift+d=new_split:down
+keybind = alt+[=goto_split:previous
+keybind = alt+]=goto_split:next
 # keybind = cmd+j=text:fg\n
 
 # delete previous word on linux with ctrl+backspace
