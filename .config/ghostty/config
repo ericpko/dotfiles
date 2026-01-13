@@ -1,10 +1,8 @@
 # Theme
 theme = noctalia
-# theme = light:Novel,dark:Atom
 #background-opacity = 0.65
 
 # Font
-# font-size = 14
 font-family = "Maple Mono NF"
 # font-family = "CommitMono Nerd Font"
 
@@ -33,16 +31,23 @@ keybind = super+h=previous_tab
 keybind = super+l=next_tab
 keybind = alt+t=new_tab
 keybind = super+t=new_tab
+keybind = ctrl+t=new_tab
 keybind = alt+h=previous_tab
 keybind = alt+l=next_tab
 keybind = alt+w=close_tab
+keybind = ctrl+w=close_tab
 keybind = super+w=close_tab
 # keybind = alt+d=new_split:auto
 keybind = alt+d=new_split:right
 keybind = alt+shift+d=new_split:down
 keybind = alt+[=goto_split:previous
 keybind = alt+]=goto_split:next
+keybind = ctrl+d=new_split:right
+keybind = ctrl+shift+d=new_split:down
+keybind = ctrl+[=goto_split:previous
+keybind = ctrl+]=goto_split:next
 # keybind = cmd+j=text:fg\n
+keybind = shift+space=unbind
 
 # delete previous word on linux with ctrl+backspace
 keybind = ctrl+backspace=text:\x1b\x7f
