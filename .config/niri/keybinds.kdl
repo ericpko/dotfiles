@@ -37,8 +37,8 @@ binds {
     MOD+H                               { focus-column-left; }
     MOD+RIGHT                           { focus-column-right; }
     MOD+L                               { focus-column-right; }
-    SUPER+J                             { focus-window-down; }
-    SUPER+K                             { focus-window-up; }
+    ALT+J                             { focus-window-down; }
+    ALT+K                             { focus-window-up; }
 
     // Move windows/columns
     MOD+SHIFT+LEFT                      { move-column-left; }
@@ -130,8 +130,8 @@ binds {
     // Stacking windows
     MOD+Comma                           { consume-or-expel-window-left; }
     MOD+Period                          { consume-or-expel-window-right; }
-    SUPER+Comma                         { consume-or-expel-window-left; }
-    SUPER+Period                        { consume-or-expel-window-right; }
+    // SUPER+Comma                         { consume-or-expel-window-left; }
+    // SUPER+Period                        { consume-or-expel-window-right; }
 
     // Display modes
     MOD+SHIFT+F                         { fullscreen-window; }
