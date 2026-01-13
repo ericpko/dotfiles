@@ -131,6 +131,14 @@ Instructions are on the homebrew page if you decide to install through brew.
 
 
 ### Niri/Linux
+A note about keybinds: I'm currently using Niri and the default MOD key <super>. 
+However, I've swapped my <alt> and <super> keys on my keyboard such that <super>
+is in the same position as <command> on MacOS. I'm also using keyd to add a few
+keybinds to <super> such as <super>-w (close tab) to make it more similar to MacOS.
+If you want to switch back to a normal Linux keyboard layout with <super> in between
+<ctrl> and <alt>, then you can uncomment the mod-key field in the niri config file
+/home/eric/.config/niri/input.kdl.
+
 [Awesome niri](https://github.com/Vortriz/awesome-niri)
 - yay keyd
 - fix ghostty terminfo
