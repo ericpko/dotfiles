@@ -1,8 +1,10 @@
 # Theme
 theme = noctalia
+# theme = light:Novel,dark:Atom
 #background-opacity = 0.65
 
 # Font
+# font-size = 16
 font-family = "Maple Mono NF"
 # font-family = "CommitMono Nerd Font"
 
