@@ -1,6 +1,7 @@
 theme = "carbonfox"
 
 [editor]
+clipboard-provider = "termcode"
 # line-number = "relative"
 scrolloff = 5
 gutters = ["diagnostics", "diff"]
