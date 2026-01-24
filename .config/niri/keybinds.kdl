@@ -41,10 +41,10 @@ binds {
     ALT+K                             { focus-window-up; }
 
     // Move windows/columns
-    MOD+SHIFT+LEFT                      { move-column-left; }
-    MOD+SHIFT+H                         { move-column-left; }
-    MOD+SHIFT+RIGHT                     { move-column-right; }
-    MOD+SHIFT+L                         { move-column-right; }
+    MOD+SHIFT+LEFT                      { move-column-left-or-to-monitor-left; }
+    MOD+SHIFT+H                         { move-column-left-or-to-monitor-left; }
+    MOD+SHIFT+RIGHT                     { move-column-right-or-to-monitor-right; }
+    MOD+SHIFT+L                         { move-column-right-or-to-monitor-right; }
     MOD+SHIFT+UP                        { move-window-up; }
     MOD+SHIFT+DOWN                      { move-window-down; }
 
@@ -81,8 +81,8 @@ binds {
 
     // ─── Workspace Management ───
     // Focus/move with J/K
-    MOD+J                               { focus-workspace-down; }
-    MOD+K                               { focus-workspace-up; }
+    MOD+J                               { focus-window-or-workspace-down; }
+    MOD+K                               { focus-window-or-workspace-up; }
     MOD+SHIFT+J                         { move-column-to-workspace-down; }
     MOD+SHIFT+K                         { move-column-to-workspace-up; }
 
