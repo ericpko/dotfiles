@@ -122,6 +122,7 @@ up() {
     # run_or_exit zvm i --zls master
     # run_or_exit zvm clean
     run_or_exit claude update
+    run_or_exit sprite upgrade
 }
 
 # usage `bre ex_file_name`
