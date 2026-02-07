@@ -98,31 +98,31 @@ up() {
         run_or_exit brew doctor
         run_or_exit brew upgrade
         run_or_exit brew cleanup
-        run_or_exit brew upgrade bun
 
     elif [[ -f "/etc/arch-release" ]]; then
         echo "🎯 Detected Arch Linux. Updating with yay..."
         run_or_exit yay -Syu
-        run_or_exit bun upgrade
 
     elif [[ -f "/etc/debian_version" ]]; then
         echo "🐧 Detected Ubuntu/Debian. Updating with apt..."
         run_or_exit sudo apt update
         run_or_exit sudo apt upgrade -y
-        run_or_exit bun upgrade
 
     else
         echo "❓ Unsupported OS."
         return 1
     fi
 
-    echo "🦀 Updating Rust and tools..."
+    echo "🦀 Updating tools..."
+    run_or_exit bun upgrade
+    run_or_exit uv self update
     run_or_exit rustup update
     run_or_exit cargo install-update -a
+    run_or_exit claude update
+    run_or_exit bun i -g @openai/codex@latest
+    run_or_exit sprite upgrade
     # run_or_exit zvm i --zls master
     # run_or_exit zvm clean
-    run_or_exit claude update
-    run_or_exit sprite upgrade
 }
 
 # usage `bre ex_file_name`

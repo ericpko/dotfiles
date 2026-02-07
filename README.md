@@ -42,6 +42,63 @@ Instructions are on the homebrew page if you decide to install through brew.
 1. clone this repo into $HOME/Developer and copy dotfiles into correct places
 
 
+## Languages
+
+### Rust Language
+1. Install Rust
+  - https://rust-lang.org/tools/install/
+1. rustup component add rust-analyzer
+1. cargo install cargo-binstall
+1. cargo install cargo-update
+1. cargo install cargo-edit
+1. cargo install bacon
+  - this is the new cargo-watch
+1. cargo install sqlx-cli
+
+
+### Bun
+- curl -fsSL https://bun.sh/install | bash
+
+
+### Zig Language
+- Install Zig Version Manager for now [zvm](https://www.zvm.app)
+  - add zvm to .zshrc (copy everything from .profile)
+  - zvm i --zls master
+
+
+### Python Language
+- curl -LsSf https://astral.sh/uv/install.sh | sh
+  - Python package manager written in Rust. Replaces pip, poetry, virtualenv, etc.
+- Keep an eye on Pyrefly vs ty for type checking
+- Install Pyrefly inside project directory:
+  - uvx pyrefly init
+  - uvx pyrefly check --summarize-errors
+- check helix --health
+- add [pyrefly](https://pyrefly.org/en/docs/IDE/#helix) to helix
+
+
+### Web Development
+- brew install typescript
+- brew install typescript-language-server
+- brew install vscode-langservers-extracted
+- brew install tailwindcss-language-server
+- brew install --cask yaak
+- brew install --cask bruno
+
+
+## AI
+- brew install --cask claude
+- brew install --cask chatgpt
+- brew install --cask codex-app
+- Claude Code
+  - curl -fsSL https://claude.ai/install.sh | bash
+- Codex:
+  - bun i -g @openai/codex@latest
+  - brew install codex
+- brew install --cask warp
+- brew install --cask zed@preview
+
+
 ## Tailscale
 - brew install --cask tailscale
 - [Install tailscale on Arch Linux](https://tailscale.com/kb/1036/install-arch)
@@ -58,7 +115,6 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install eza
 - brew install lazygit
 - brew install lazydocker
-- brew install oven-sh/bun/bun
 - brew install dust
 - brew install fd
 - brew install lf
@@ -99,15 +155,6 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install --cask tradingview
 - brew install --cask ledger-live
 - brew install --cask typora@dev
-
-
-### AI
-- brew install --cask chatgpt
-- brew install --cask codex
-- brew install --cask claude
-- bun install -g @anthropic-ai/claude-code
-- brew install --cask warp
-- brew install --cask zed@preview
 
 
 ### MacOS specific
@@ -163,45 +210,6 @@ If you want to switch back to a normal Linux keyboard layout with <super> in bet
 - Choose an idle manager:
   - [stasis](https://github.com/saltnpepper97/stasis)
   - swayidle
-
-
-## Languages
-
-### Rust Language
-1. install Rust
-1. rustup component add rust-analyzer
-1. brew install cargo-binstall
-1. brew install cargo-update
-1. brew install cargo-edit
-1. brew install bacon
-  - this is the new cargo-watch
-1. brew install sqlx-cli
-
-
-### Zig Language
-- Install Zig Version Manager for now [zvm](https://www.zvm.app)
-  - add zvm to .zshrc (copy everything from .profile)
-  - zvm i --zls master
-<!-- - brew install zig -->
-<!-- - brew install zls -->
-
-
-### Python Language
-- brew install uv
-  - Python package manager written in Rust. Replaces pip, poetry, virtualenv, etc.
-- Keep an eye on Pyrefly vs ty for type checking
-- brew install pyrefly
-  - check helix --health
-  - add [pyrefly](https://pyrefly.org/en/docs/IDE/#helix) to helix
-
-
-### Web Development
-- brew install typescript
-- brew install typescript-language-server
-- brew install vscode-langservers-extracted
-- brew install tailwindcss-language-server
-- brew install --cask yaak
-- brew install --cask bruno
 
 
 ## VPS
