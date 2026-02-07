@@ -120,7 +120,7 @@ up() {
     run_or_exit cargo install-update -a
     run_or_exit claude update
     run_or_exit bun i -g @openai/codex@latest
-    run_or_exit sprite upgrade
+    run_or_exit sprite upgrade --force
     # run_or_exit zvm i --zls master
     # run_or_exit zvm clean
 }
