@@ -68,6 +68,9 @@ alias cd="z"
 alias y="yazi"
 alias ff="fzf"
 alias top="btm"
+alias cc="claude --resume"
+alias ccc="claude --continue"
+alias cx="codex resume"
 # Set aliases based on OS
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # macOS (Homebrew)
