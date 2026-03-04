@@ -82,19 +82,20 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install typescript-language-server
 - brew install vscode-langservers-extracted
 - brew install tailwindcss-language-server
+- brew install --cask hoppscotch
 - brew install --cask yaak
-- brew install --cask bruno
 
 
-## AI
+## AI & Dev
 - brew install --cask claude
 - brew install --cask chatgpt
 - brew install --cask codex-app
 - Claude Code
   - curl -fsSL https://claude.ai/install.sh | bash
 - Codex:
-  - bun i -g @openai/codex@latest
   - brew install codex
+  - bun i -g @openai/codex@latest
+- brew install --cask cmux
 - brew install --cask warp
 - brew install --cask zed@preview
 
@@ -153,25 +154,22 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install --cask discord
 - brew install --cask zoom
 - brew install --cask tradingview
+- brew install --cask trezor-suite
 - brew install --cask ledger-live
 - brew install --cask typora@dev
 
 
 ### MacOS specific
-- brew install koekeishiya/formulae/[skhd](https://github.com/koekeishiya/skhd) or brew install --cask thor
-  - Don't need this anymore, just use raycast
+- brew install --cask raycast
 - brew install kanata
   - have to install karabiner-elements first:
   - brew install --cask karabiner-elements
 - brew install --cask hyperkey
 - brew install --cask thor
-- brew install --cask leader-key
 - brew install --cask antinote
 - brew install --cask dockey
 - brew install --cask appcleaner
 - brew install --cask iina
-- brew install --cask maccy (included in Raycast)
-- brew install --cask raycast
 - brew install --cask transmission
 - brew install telnet
 - brew install --cask antinote
