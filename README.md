@@ -161,6 +161,7 @@ Instructions are on the homebrew page if you decide to install through brew.
 
 ### MacOS specific
 - brew install --cask raycast
+- brew install --cask sanesidebuttons
 - brew install kanata
   - have to install karabiner-elements first:
   - brew install --cask karabiner-elements
