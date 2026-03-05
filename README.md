@@ -99,6 +99,9 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install --cask warp
 - brew install --cask zed@preview
 
+- Install skills from skills.sh
+  - bunx skills add https://github.com/anthropics/skills --skill frontend-design
+
 
 ## Tailscale
 - brew install --cask tailscale
