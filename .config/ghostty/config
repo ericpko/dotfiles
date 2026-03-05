@@ -1,6 +1,6 @@
 # Theme
-theme = noctalia
-# theme = light:Novel,dark:Atom
+# theme = noctalia
+theme = light:Novel,dark:Atom
 #background-opacity = 0.65
 
 # Font
@@ -22,11 +22,16 @@ shell-integration-features = ssh-env
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
-window-height = 40
-window-width = 150
+# window-height = 40
+# window-width = 150
+
+# Quick Terminal/Dropdown Terminal
+quick-terminal-position = top
+quick-terminal-size = 50%
 
 # Keybinds
 keybind = super+r=reload_config
+keybind = global:super+\=toggle_quick_terminal
 keybind = super+left=previous_tab
 keybind = super+right=next_tab
 keybind = super+h=previous_tab
@@ -53,12 +58,12 @@ keybind = ctrl+backspace=text:\x1b\x7f
 # Linux issues -- trying to make it like MacOS with cmd+backspace and opt+backspace
 # keybind = alt+backspace=text:\x15
 keybind = shift+home>backspace=text:\x15
-keybind = super+backspace=text:\x17
+# keybind = super+backspace=text:\x17
 
 # Shaders
-custom-shader = shaders/cursor_smear.glsl
+# custom-shader = shaders/cursor_smear.glsl
 # custom-shader = shaders/cursor_smear_fade.glsl
-# custom-shader = shaders/cursor_blaze.glsl
+custom-shader = shaders/cursor_blaze.glsl
 # custom-shader = shaders/cursor_blaze_tapered.glsl
 # custom-shader = shaders/cursor_blaze_no_trail.glsl
 # custom-shader = shaders/manga_slash.glsl
