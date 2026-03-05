@@ -102,6 +102,7 @@ up() {
         run_or_exit brew doctor
         run_or_exit brew upgrade
         run_or_exit brew cleanup
+        run_or_exit brew autoremove
 
     elif [[ -f "/etc/arch-release" ]]; then
         echo "🎯 Detected Arch Linux. Updating with yay..."
