@@ -1,7 +1,8 @@
 theme = "carbonfox"
 
 [editor]
-clipboard-provider = "termcode"
+# Use clipboard-provider termcode to copy paste over ssh
+# clipboard-provider = "termcode"
 # line-number = "relative"
 scrolloff = 5
 gutters = ["diagnostics", "diff"]
