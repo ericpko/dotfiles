@@ -26,7 +26,7 @@ Oh-my-zsh can be installed through homebrew or git. It's easier just to go throu
 Instructions are on the homebrew page if you decide to install through brew.
 
 1. install [oh-my-zsh](https://ohmyz.sh)
-  - Consider trying carapace completions instead?
+  - Use carapace completions instead of zsh-completions
   - brew install carapace
 1. install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 1. install [zsh-completions](https://github.com/zsh-users/zsh-completions)
@@ -35,10 +35,9 @@ Instructions are on the homebrew page if you decide to install through brew.
 
 ## Terminal
 1. brew install --cask ghostty@tip
+  - On MacOS, go to settings > Keyboard > Keyboard Shortcuts... > App Shortcuts > Add App Ghostty Title: Hide Ghostty, then make a random new bind for Hide Ghostty
 1. brew install helix
 1. brew install starship
-1. brew install --cask zed@preview
-  - open zed and install the CLI so zed can be opened from the terminal.
 1. clone this repo into $HOME/Developer and copy dotfiles into correct places
 
 
@@ -67,7 +66,8 @@ Instructions are on the homebrew page if you decide to install through brew.
 
 
 ### Python Language
-- curl -LsSf https://astral.sh/uv/install.sh | sh
+- brew install uv
+  - curl -LsSf https://astral.sh/uv/install.sh | sh
   - Python package manager written in Rust. Replaces pip, poetry, virtualenv, etc.
 - Keep an eye on Pyrefly vs ty for type checking
 - Install Pyrefly inside project directory:
