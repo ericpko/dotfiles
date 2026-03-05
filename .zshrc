@@ -1,9 +1,11 @@
 #!/usr/bin/env zsh
 
 # Paths
-PATH="$PATH:""$HOME"'/.cargo/bin'
-PATH="$PATH:""$HOME"'/.local/bin'
-PATH="$PATH:""$HOME"'/.bun/bin'
+export PATH="$PATH:""$HOME"'/.cargo/bin'
+export PATH="$PATH:""$HOME"'/.local/bin'
+export PATH="$PATH:""$HOME"'/.bun/bin'
+# Homebrew BEFORE other paths
+export PATH="/opt/homebrew/bin:$PATH"
 
 # ZVM
 export ZVM_INSTALL="$HOME/.zvm/self"
@@ -28,7 +30,7 @@ plugins=(git colored-man-pages zsh-autosuggestions
          zsh-syntax-highlighting sudo copypath)
 
 # zsh-completions
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+# fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
