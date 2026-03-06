@@ -21,6 +21,10 @@ Install everything in the following order.
 - brew install --cask font-maple-mono-nf
 
 
+## Nushell
+- brew install nushell
+
+
 ## oh-my-zsh
 Oh-my-zsh can be installed through homebrew or git. It's easier just to go through git and install them as plugins.
 Instructions are on the homebrew page if you decide to install through brew.
@@ -90,7 +94,7 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install --cask yaak
 
 
-## AI & Dev
+## AI Tools
 - Claude Code
   - curl -fsSL https://claude.ai/install.sh | bash
 - Codex:
@@ -103,8 +107,10 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install --cask warp@preview
 - brew install --cask zed@preview
 
-- Install skills from skills.sh
+- Install skills from [skills.sh](skills.sh)
   - bunx skills add https://github.com/anthropics/skills --skill frontend-design
+- [worktrunk](https://worktrunk.dev/)
+  - brew install worktrunk && wt config shell install
 
 
 ## Tailscale
@@ -116,6 +122,9 @@ Instructions are on the homebrew page if you decide to install through brew.
 ## Homebrew/Linux
 
 ### Command-line Tools
+https://terminaltrove.com/
+https://terminaltrove.com/language/rust/
+
 - brew install gh
   - gh auth login
 - brew install ollama
