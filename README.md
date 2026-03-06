@@ -91,16 +91,16 @@ Instructions are on the homebrew page if you decide to install through brew.
 
 
 ## AI & Dev
-- brew install --cask claude
-- brew install --cask chatgpt
-- brew install --cask codex-app
 - Claude Code
   - curl -fsSL https://claude.ai/install.sh | bash
 - Codex:
   - brew install codex
   - bun i -g @openai/codex@latest
+- brew install --cask claude
+- brew install --cask chatgpt
+- brew install --cask codex-app
 - brew install --cask cmux
-- brew install --cask warp
+- brew install --cask warp@preview
 - brew install --cask zed@preview
 
 - Install skills from skills.sh
