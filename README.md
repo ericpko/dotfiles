@@ -40,6 +40,10 @@ Instructions are on the homebrew page if you decide to install through brew.
 1. brew install starship
 1. clone this repo into $HOME/Developer and copy dotfiles into correct places
 
+### Optional Terminals:
+- brew install --cask warp@preview
+- brew install --cask cmux
+
 
 ## Languages
 
