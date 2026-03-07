@@ -92,6 +92,7 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install tailwindcss-language-server
 - brew install --cask hoppscotch
 - brew install --cask yaak
+- brew install playwright-cli
 
 
 ## AI Tools
