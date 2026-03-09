@@ -107,6 +107,8 @@ Instructions are on the homebrew page if you decide to install through brew.
 - brew install --cask cmux
 - brew install --cask warp@preview
 - brew install --cask zed@preview
+- brew install --cask wispr-flow
+- https://voxtype.io
 
 - Install skills from [skills.sh](skills.sh)
   - bunx skills add https://github.com/anthropics/skills --skill frontend-design
