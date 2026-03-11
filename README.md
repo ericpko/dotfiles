@@ -165,6 +165,8 @@ https://terminaltrove.com/language/rust/
   - [Zathura](https://github.com/homebrew-zathura/homebrew-zathura) is a pdf viewer in the terminal
 - brew install frpc
 - brew install zellij
+- brew install glow
+- brew install llmfit
 
 
 ### Applications
@@ -193,6 +195,8 @@ https://terminaltrove.com/language/rust/
 - brew install --cask transmission
 - brew install telnet
 - brew install --cask antinote
+- brew install mole
+- brew install gromgit/brewtils/taproom
 
 
 ### Niri/Linux
