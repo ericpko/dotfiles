@@ -167,6 +167,7 @@ https://terminaltrove.com/language/rust/
 - brew install zellij
 - brew install glow
 - brew install llmfit
+- brew install herdr
 
 
 ### Applications
