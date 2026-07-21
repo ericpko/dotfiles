@@ -168,6 +168,7 @@ https://terminaltrove.com/language/rust/
 - brew install glow
 - brew install llmfit
 - brew install herdr
+- brew install croc
 
 
 ### Applications
