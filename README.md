@@ -169,6 +169,7 @@ https://terminaltrove.com/language/rust/
 - brew install llmfit
 - brew install herdr
 - brew install croc
+- brew install mole
 
 
 ### Applications
