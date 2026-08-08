@@ -200,6 +200,8 @@ https://terminaltrove.com/language/rust/
 - brew install --cask antinote
 - brew install mole
 - brew install gromgit/brewtils/taproom
+- brew install --cask itsycal
+
 
 
 ### Niri/Linux
