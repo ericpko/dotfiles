@@ -201,6 +201,7 @@ https://terminaltrove.com/language/rust/
 - brew install mole
 - brew install gromgit/brewtils/taproom
 - brew install --cask itsycal
+- brew install --cask maccy
 
 
 
