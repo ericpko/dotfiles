@@ -19,6 +19,7 @@ keymap:
       Alt-c: Ctrl-c             # copy
       Alt-v: Ctrl-v             # paste
       Alt-w: Ctrl-w             # close tab
+      Alt-s: Ctrl-s             # save
       Super-BackSpace: Ctrl-BackSpace          # delete word back
       Alt-BackSpace: [Shift-Home, BackSpace]   # delete to line start
 
