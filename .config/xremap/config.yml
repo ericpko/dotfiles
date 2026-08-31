@@ -1,0 +1,35 @@
+# macOS-style shortcuts, surgically — everything unmapped passes through to niri.
+# Combo note: "Super" = physical Win key, "Alt" = physical Alt key.
+
+keymap:
+  # ─── Browser: Mac-style tab shortcuts ───
+  - name: mac-style browser
+    application:
+      only: [helium, firefox]
+    remap:
+      Alt-t: Ctrl-t             # new tab
+      Alt-Shift-t: Ctrl-Shift-t # reopen closed tab
+
+  # ─── GUI apps: clipboard + deletion ───
+  - name: mac clipboard and deletion (GUI apps)
+    application:
+      not: [com.mitchellh.ghostty]
+    remap:
+      Alt-a: Ctrl-a             # select all
+      Alt-c: Ctrl-c             # copy
+      Alt-v: Ctrl-v             # paste
+      Alt-w: Ctrl-w             # close tab
+      Super-BackSpace: Ctrl-BackSpace          # delete word back
+      Alt-BackSpace: [Shift-Home, BackSpace]   # delete to line start
+
+  # ─── Terminal: same finger memory, terminal dialect ───
+  - name: mac clipboard and deletion (terminal)
+    application:
+      only: [com.mitchellh.ghostty]
+    remap:
+      Alt-a: Ctrl-Shift-a       # ghostty: select_all
+      Alt-c: Ctrl-Shift-c       # ghostty: copy
+      Alt-v: Ctrl-Shift-v       # ghostty: paste
+      Alt-w: Ctrl-w             # ghostty: close_tab
+      Super-BackSpace: Alt-BackSpace  # shell: delete word back (Ctrl-w closes ghostty tabs!)
+      Alt-BackSpace: Ctrl-u           # shell: delete to line start

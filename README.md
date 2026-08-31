@@ -44,10 +44,6 @@ Instructions are on the homebrew page if you decide to install through brew.
 1. brew install starship
 1. clone this repo into $HOME/Developer and copy dotfiles into correct places
 
-### Optional Terminals:
-- brew install --cask warp@preview
-- brew install --cask cmux
-
 
 ## Languages
 
@@ -55,6 +51,7 @@ Instructions are on the homebrew page if you decide to install through brew.
 1. Install Rust
   - https://rust-lang.org/tools/install/
 1. rustup component add rust-analyzer
+1. Use package manager (brew or pacman/paru/yay) to install these:
 1. cargo install cargo-binstall
 1. cargo install cargo-update
 1. cargo install cargo-edit
@@ -97,23 +94,11 @@ Instructions are on the homebrew page if you decide to install through brew.
 
 ## AI Tools
 - Claude Code
-  - curl -fsSL https://claude.ai/install.sh | bash
-- Codex:
-  - brew install codex
-  - bun i -g @openai/codex@latest
-- brew install --cask claude
-- brew install --cask chatgpt
-- brew install --cask codex-app
-- brew install --cask cmux
-- brew install --cask warp@preview
-- brew install --cask zed@preview
-- brew install --cask wispr-flow
-- https://voxtype.io
+- Claude Desktop
+- ChatGPT
 
 - Install skills from [skills.sh](skills.sh)
   - bunx skills add https://github.com/anthropics/skills --skill frontend-design
-- [worktrunk](https://worktrunk.dev/)
-  - brew install worktrunk && wt config shell install
 
 
 ## Tailscale
@@ -128,105 +113,81 @@ Instructions are on the homebrew page if you decide to install through brew.
 https://terminaltrove.com/
 https://terminaltrove.com/language/rust/
 
-- brew install gh
-  - gh auth login
-- brew install ollama
-- brew install bat
-- brew install eza
-- brew install lazygit
-- brew install lazydocker
-- brew install dust
-- brew install fd
-- brew install lf
-- brew install procs
-- brew install ripgrep
-- brew install sd
-- brew install taplo
-- brew install tealdeer
-- brew install tree-sitter
-- brew install fzf
-- brew install yazi
-- brew install zoxide
-- brew install just
-- brew install atuin
-- brew install fastfetch
-- brew install bottom
-  - brew install btop
-- Linux only - dysk
-- brew install jj
+Install everything in one go (mole is macOS only, dysk is Linux only):
+
+macOS:
+```bash
+brew install gh bat eza lazygit dust fd lf procs ripgrep sd taplo tealdeer tree-sitter fzf yazi zoxide just atuin fastfetch bottom btop carapace glow llmfit herdr croc mole
+```
+
+Arch Linux (note the different package names: github-cli, taplo-cli, tree-sitter-cli):
+```bash
+paru -S --needed github-cli bat eza lazygit dust fd lf procs ripgrep sd taplo-cli tealdeer tree-sitter-cli fzf yazi zoxide just atuin fastfetch bottom btop carapace glow llmfit herdr croc dysk
+```
+
+- gh auth login
+
+Optional (not always installed):
+- ollama
+- jj
   - git alternative written in Rust
-- brew install carapace
-  - Multi-shell multi-command argument completer written in Golang
 - brew tap philocalyst/tap && brew install caligula
   - TUI burning tool written in Rust
 - Typst
-  - brew install tinymist
-  - brew install typstyle
+  - tinymist, typstyle
   - [Zathura](https://github.com/homebrew-zathura/homebrew-zathura) is a pdf viewer in the terminal
-- brew install frpc
-- brew install zellij
-- brew install glow
-- brew install llmfit
-- brew install herdr
-- brew install croc
-- brew install mole
+- frpc
+- zellij
 
 
 ### Applications
-- brew install --cask alacritty (maybe)
-  - NOTE: The dotfiles/.config/alacritty/themes subdirectory is a [separate git repo](https://github.com/alacritty/alacritty-theme).
 - brew install --cask discord
 - brew install --cask zoom
 - brew install --cask tradingview
 - brew install --cask trezor-suite
 - brew install --cask ledger-live
-- brew install --cask typora@dev
 
 
 ### MacOS specific
 - brew install --cask raycast
 - brew install --cask sanesidebuttons
-- brew install kanata
-  - have to install karabiner-elements first:
-  - brew install --cask karabiner-elements
 - brew install --cask hyperkey
-- brew install --cask thor
-- brew install --cask antinote
-- brew install --cask dockey
 - brew install --cask appcleaner
 - brew install --cask iina
 - brew install --cask transmission
-- brew install telnet
 - brew install --cask antinote
 - brew install mole
-- brew install gromgit/brewtils/taproom
 - brew install --cask itsycal
 - brew install --cask maccy
 
 
 
 ### Niri/Linux
-A note about keybinds: I'm currently using Niri and the default MOD key <super>. 
-However, I've swapped my <alt> and <super> keys on my keyboard such that <super>
-is in the same position as <command> on MacOS. I'm also using keyd to add a few
-keybinds to <super> such as <super>-w (close tab) to make it more similar to MacOS.
-If you want to switch back to a normal Linux keyboard layout with <super> in between
-<ctrl> and <alt>, then you can uncomment the mod-key field in the niri config file
-/home/eric/.config/niri/input.kdl.
+A note about keybinds: Niri's MOD key is <alt> (set via `mod-key "Alt"` in
+`.config/niri/cfg/input.kdl`), because <alt> sits where <command> does on a Mac.
+On top of that, xremap adds Mac-style app shortcuts with per-app rules
+(alt-t/alt-w for browser tabs, alt-a/c/v select/copy/paste, win-backspace /
+alt-backspace word/line delete — translated to Ctrl+Shift in the terminal and
+readline keys at the shell). Config: `.config/xremap/config.yml` (hot-reloads on
+save). Noctalia is the shell: bar, launcher (mod+space), lock/idle, session menu,
+and it themes niri's colors. The niri config uses CachyOS's structure:
+`config.kdl` + `cfg/*.kdl` modules.
+
+Don't bother with: Toshy (wants the whole modifier row) or a Ctrl/Alt XKB swap
+with Ctrl as mod (niri's Mod+letter binds globally eat Ctrl+L/F/S/R in every app).
+
+xremap setup:
+```bash
+paru -S xremap-niri-bin
+echo 'KERNEL=="uinput", GROUP="input", MODE="0660"' | sudo tee /etc/udev/rules.d/99-xremap.rules
+sudo udevadm control --reload-rules && sudo udevadm trigger --name-match=uinput
+sudo gpasswd -a $USER input   # log out/in after
+systemctl --user enable --now xremap.service   # unit in .config/systemd/user/
+```
 
 [Awesome niri](https://github.com/Vortriz/awesome-niri)
-- yay keyd
 - fix ghostty terminfo
   - this might be fixed in Linux by default in the future
-- paru niri-switch
-- choose a launcher:
-  - walker
-    - install elephant bin first and all the providers as bin as well
-  - anyrun
-  - fuzzel
-  - vicinae
-  - rofi
-- yay stasis
 - [niri animations](https://github.com/XansiVA/nirimation)
 - yay impala
 - yay bluetui
@@ -235,7 +196,7 @@ If you want to switch back to a normal Linux keyboard layout with <super> in bet
   - install zathura mupdf as well
 - yay cider
   - check email for code
-- Choose an idle manager:
+- Idle/lock is handled by noctalia. Alternatives for reference:
   - [stasis](https://github.com/saltnpepper97/stasis)
   - swayidle
 
@@ -311,4 +272,4 @@ sudo ufw enable
 - brew install --cask orbstack
   - Docker alternative for Mac
 - brew install --cask container
-- brew install jesseduffield/lazydocker/lazydocker
+- brew install lazydocker
