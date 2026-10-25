@@ -2,7 +2,7 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 
 input {
-    mod-key "Alt"
+    mod-key "Super"
     keyboard {
         xkb {
             //If you want to overwrite your keyboard layout,
