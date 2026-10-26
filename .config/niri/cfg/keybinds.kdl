@@ -145,6 +145,7 @@ binds {
 
     // ─── Layout Controls ───
     Mod+CTRL+F                          { expand-column-to-available-width; }
+    Mod+G                               { center-column; } // Mod+C is copy via xremap
     Mod+Shift+C                         { center-column; }
     Mod+CTRL+C                          { center-visible-columns; }
     Mod+Minus                           { set-column-width "-10%"; }
