@@ -5,6 +5,7 @@
 keymap:
   # ─── Browser: Mac-style tab shortcuts ───
   - name: mac-style browser
+    exact_match: true # Super-Shift-c etc. pass through to niri instead of matching Super-c
     application:
       only: [helium, firefox]
     remap:
@@ -13,6 +14,7 @@ keymap:
 
   # ─── GUI apps: clipboard + deletion ───
   - name: mac clipboard and deletion (GUI apps)
+    exact_match: true
     application:
       not: [com.mitchellh.ghostty]
     remap:
@@ -26,6 +28,7 @@ keymap:
 
   # ─── Terminal: same finger memory, terminal dialect ───
   - name: mac clipboard and deletion (terminal)
+    exact_match: true
     application:
       only: [com.mitchellh.ghostty]
     remap:
