@@ -121,6 +121,8 @@ up() {
         echo "🎯 Detected Arch Linux. Updating with paru..."
         run_or_exit paru -Syu
         run_or_exit paru -c --noconfirm    # remove orphans + unneeded deps
+        # pacman's sandboxed downloader can leave download-* temp dirs that -Sc chokes on
+        sudo rm -rf /var/cache/pacman/pkg/download-*(N)
         run_or_exit paru -Sc --noconfirm   # clean package + AUR build cache
 
     elif [[ -f "/etc/debian_version" ]]; then
