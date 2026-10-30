@@ -167,8 +167,8 @@ A note about keybinds: the Wooting 60HE is remapped in Wootility so the key next
 to space (where <command> is on a Mac) sends L-Super and the one beside it (where
 <option> is) sends L-Alt. Niri's MOD key is Super (set via `mod-key "Super"` in
 `.config/niri/cfg/input.kdl`). On top of that, xremap adds Mac-style app
-shortcuts with per-app rules (super-t/super-w for browser tabs, super-a/c/v
-select/copy/paste, alt-backspace / super-backspace word/line delete — translated
+shortcuts with per-app rules (super-t/super-w for browser tabs, super-a
+select all, alt-backspace / super-backspace word/line delete — translated
 to Ctrl+Shift in the terminal and readline keys at the shell). Config: `.config/xremap/config.yml` (hot-reloads on
 save). Noctalia is the shell: bar, launcher (mod+space), lock/idle, session menu,
 and it themes niri's colors. The niri config uses CachyOS's structure:

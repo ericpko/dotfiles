@@ -145,7 +145,7 @@ binds {
 
     // ─── Layout Controls ───
     Mod+CTRL+F                          { expand-column-to-available-width; }
-    Mod+G                               { center-column; } // Mod+C is copy via xremap
+    Mod+C                               { center-column; }
     Mod+Shift+C                         { center-column; }
     Mod+CTRL+C                          { center-visible-columns; }
     Mod+Minus                           { set-column-width "-10%"; }
@@ -155,7 +155,7 @@ binds {
 
 
     // ─── Modes ───
-    Mod+D                               { toggle-window-floating; }
+    Mod+V                               { toggle-window-floating; }
     Mod+F                               { maximize-column; }
     Mod+Shift+F                         { fullscreen-window; }
     Mod+Shift+W                         { toggle-column-tabbed-display; }

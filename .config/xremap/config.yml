@@ -5,7 +5,7 @@
 keymap:
   # ─── Browser: Mac-style tab shortcuts ───
   - name: mac-style browser
-    exact_match: true # Super-Shift-c etc. pass through to niri instead of matching Super-c
+    exact_match: true # Super-Shift-s etc. pass through to niri instead of matching Super-s
     application:
       only: [helium, firefox]
     remap:
@@ -19,8 +19,8 @@ keymap:
       not: [com.mitchellh.ghostty]
     remap:
       Super-a: Ctrl-a             # select all
-      Super-c: Ctrl-c             # copy
-      Super-v: Ctrl-v             # paste
+      # Super-c: Ctrl-c           # copy (niri: Mod+C centers the window)
+      # Super-v: Ctrl-v           # paste (niri: Mod+V floats the window)
       Super-w: Ctrl-w             # close tab
       Super-s: Ctrl-s             # save
       Alt-BackSpace: Ctrl-BackSpace              # delete word back
@@ -33,8 +33,8 @@ keymap:
       only: [com.mitchellh.ghostty]
     remap:
       Super-a: Ctrl-Shift-a       # ghostty: select_all
-      Super-c: Ctrl-Shift-c       # ghostty: copy
-      Super-v: Ctrl-Shift-v       # ghostty: paste
+      # Super-c: Ctrl-Shift-c     # ghostty: copy (niri: Mod+C centers the window)
+      # Super-v: Ctrl-Shift-v     # ghostty: paste (niri: Mod+V floats the window)
       Super-w: Ctrl-w             # ghostty: close_tab
       Super-BackSpace: Ctrl-u     # shell: delete to line start
       # Alt-BackSpace passes through: readline's native delete word back
