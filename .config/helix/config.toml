@@ -77,6 +77,8 @@ L = ["goto_next_buffer"]
 # Page scrolling (keeps cursor position)
 Cmd-j = "page_cursor_half_down"
 Cmd-k = "page_cursor_half_up"
+Cmd-A-C-j = "page_cursor_half_down"
+Cmd-A-C-k = "page_cursor_half_up"
 "G" = ["goto_last_line", "align_view_center"]
 
 # File navigation with centering
