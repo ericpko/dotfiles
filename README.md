@@ -33,13 +33,14 @@ Instructions are on the homebrew page if you decide to install through brew.
   - Use carapace completions instead of zsh-completions
   - brew install carapace
 1. install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
-1. install [zsh-completions](https://github.com/zsh-users/zsh-completions)
 1. install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 
 ## Terminal
 1. brew install --cask ghostty@tip
+  - Install Ghostty from the website, not homebrew. Ghostty has it's own auto updates.
   - On MacOS, go to settings > Keyboard > Keyboard Shortcuts... > App Shortcuts > Add App Ghostty Title: Hide Ghostty, then make a random new bind for Hide Ghostty
+1. brew install --cask rex
 1. brew install helix
 1. brew install starship
 1. clone this repo into $HOME/Developer and copy dotfiles into correct places
@@ -117,12 +118,12 @@ Install everything in one go (mole is macOS only, dysk is Linux only):
 
 macOS:
 ```bash
-brew install gh bat eza lazygit dust fd lf procs ripgrep sd taplo tealdeer tree-sitter fzf yazi zoxide just atuin fastfetch bottom btop carapace glow llmfit herdr croc mole
+brew install gh starship bat eza lazygit dust fd lf procs ripgrep sd taplo tealdeer tree-sitter fzf yazi zoxide just atuin fastfetch bottom btop carapace glow llmfit herdr croc mole
 ```
 
 Arch Linux (note the different package names: github-cli, taplo-cli, tree-sitter-cli):
 ```bash
-paru -S --needed github-cli bat eza lazygit dust fd lf procs ripgrep sd taplo-cli tealdeer tree-sitter-cli fzf yazi zoxide just atuin fastfetch bottom btop carapace glow llmfit herdr croc dysk
+paru -S --needed github-cli starship bat eza lazygit dust fd lf procs ripgrep sd taplo-cli tealdeer tree-sitter-cli fzf yazi zoxide just atuin fastfetch bottom btop carapace glow llmfit herdr croc dysk impala bluetui mpv
 ```
 
 - gh auth login
@@ -156,7 +157,6 @@ Optional (not always installed):
 - brew install --cask iina
 - brew install --cask transmission
 - brew install --cask antinote
-- brew install mole
 - brew install --cask itsycal
 - brew install --cask maccy
 
