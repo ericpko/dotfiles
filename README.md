@@ -186,6 +186,29 @@ sudo gpasswd -a $USER input   # log out/in after
 systemctl --user enable --now xremap.service   # unit in .config/systemd/user/
 ```
 
+Wi-Fi lag spikes (RTL8922AE, `rtw89` driver, NetworkManager): games spiked because
+of two things. Wi-Fi power save caused constant packet loss, and background scans
+stopped all traffic for about 5 seconds every 5 minutes. Both settings live in
+the Wi-Fi connection's NetworkManager profile, not in this repo. They survive
+reboots, but a reinstall or new Wi-Fi network needs them set again.
+```bash
+nmcli -f NAME,TYPE connection show             # find your Wi-Fi connection name
+iw dev wlan0 link                              # "Connected to" is the current BSSID
+nmcli connection modify "<wifi name>" 802-11-wireless.powersave 2
+nmcli connection modify "<wifi name>" 802-11-wireless.bssid <bssid>   # stops the scans
+nmcli connection up "<wifi name>"
+iw dev wlan0 get power_save                    # should say off
+```
+The BSSID pin locks the connection to one router radio. If Wi-Fi won't connect
+(new router, router reset, BSSID changed), this works with no internet:
+```bash
+nmcli -f 802-11-wireless.bssid connection show "<wifi name>"   # see the current pin
+nmcli connection modify "<wifi name>" 802-11-wireless.bssid ""
+nmcli connection up "<wifi name>"
+```
+With a new router, re-pin using its BSSID once connected. Keep the Wi-Fi name and
+BSSID out of this public repo.
+
 [Awesome niri](https://github.com/Vortriz/awesome-niri)
 - fix ghostty terminfo
   - this might be fixed in Linux by default in the future
