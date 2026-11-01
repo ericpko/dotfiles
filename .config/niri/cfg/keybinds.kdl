@@ -23,8 +23,8 @@ binds {
 
     // --- Noctalia ---
     Mod+Shift+Return                    hotkey-overlay-title="Open Wallpaper Selector: noctalia wallpaper toggle" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
-    Mod+CTRL+S                          hotkey-overlay-title="Open Control Center: noctalia controlCenter" { spawn-sh "noctalia msg panel-toggle control-center"; }
-    Mod+Shift+S                         hotkey-overlay-title="Open Settings: noctalia settings" { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+CTRL+Comma                      hotkey-overlay-title="Open Control Center: noctalia controlCenter" { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Shift+Comma                     hotkey-overlay-title="Open Settings: noctalia settings" { spawn-sh "noctalia msg settings-toggle"; }
     Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Alt+Shift+L                         hotkey-overlay-title="Lock & Suspend: noctalia" { spawn-sh "noctalia msg session lock-and-suspend"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "noctalia msg panel-toggle session"; }
@@ -52,20 +52,26 @@ binds {
     // ─── Window Movement and Focus ───
     Mod+Q                               { close-window; }
 
-    // Focus windows/columns (Mod+J/K also cross into workspaces below/above)
+    // Focus windows/columns (Mod+W/S and Mod+K/J also cross into workspaces above/below)
     Mod+Left                            { focus-column-left; }
+    Mod+A                               { focus-column-left; }
     Mod+H                               { focus-column-left; }
     Mod+Right                           { focus-column-right; }
+    Mod+D                               { focus-column-right; }
     Mod+L                               { focus-column-right; }
     Mod+Up                              { focus-window-up; }
+    Mod+W                               { focus-window-or-workspace-up; }
     Mod+K                               { focus-window-or-workspace-up; }
     Mod+Down                            { focus-window-down; }
+    Mod+S                               { focus-window-or-workspace-down; }
     Mod+J                               { focus-window-or-workspace-down; }
 
     // Move windows/columns
     Mod+Shift+Left                      { move-column-left-or-to-monitor-left; }
+    Mod+Shift+A                         { move-column-left-or-to-monitor-left; }
     Mod+Shift+H                         { move-column-left-or-to-monitor-left; }
     Mod+Shift+Right                     { move-column-right-or-to-monitor-right; }
+    Mod+Shift+D                         { move-column-right-or-to-monitor-right; }
     Mod+Shift+L                         { move-column-right-or-to-monitor-right; }
     Mod+Shift+UP                        { move-window-up; }
     Mod+Shift+Down                      { move-window-down; }
@@ -77,12 +83,16 @@ binds {
 
     // Monitor focus
     Mod+CTRL+Left                       { focus-monitor-left; }
+    Mod+CTRL+A                          { focus-monitor-left; }
     Mod+CTRL+H                          { focus-monitor-left; }
     Mod+CTRL+Right                      { focus-monitor-right; }
+    Mod+CTRL+D                          { focus-monitor-right; }
     Mod+CTRL+L                          { focus-monitor-right; }
     Mod+CTRL+UP                         { focus-monitor-up; }
+    Mod+CTRL+W                          { focus-monitor-up; }
     Mod+CTRL+K                          { focus-monitor-up; }
     Mod+CTRL+Down                       { focus-monitor-down; }
+    Mod+CTRL+S                          { focus-monitor-down; }
     Mod+CTRL+J                          { focus-monitor-down; }
 
     Mod+Shift+CTRL+Left                 { move-column-to-monitor-left; }
@@ -140,7 +150,9 @@ binds {
     Mod+Shift+8                         { move-column-to-workspace 8; }
     Mod+Shift+9                         { move-column-to-workspace 9; }
 
+    Mod+Shift+S                         { move-column-to-workspace-down; }
     Mod+Shift+J                         { move-column-to-workspace-down; }
+    Mod+Shift+W                         { move-column-to-workspace-up; }
     Mod+Shift+K                         { move-column-to-workspace-up; }
 
     // ─── Layout Controls ───
@@ -158,7 +170,7 @@ binds {
     Mod+V                               { toggle-window-floating; }
     Mod+F                               { maximize-column; }
     Mod+Shift+F                         { fullscreen-window; }
-    Mod+Shift+W                         { toggle-column-tabbed-display; }
+    Mod+Y                               { toggle-column-tabbed-display; }
     Mod+M                               { maximize-window-to-edges; }
 
     // ─── Screenshots ───
@@ -174,5 +186,6 @@ binds {
     // ─── Exit / Power ───
     CTRL+ALT+Delete                     { quit; } // Also quits Niri
     Mod+Shift+P                         { power-off-monitors; } // Turn off screens (useful for OLED or privacy)
+    Mod+X                               repeat=false { toggle-overview; }
     Mod+O                               repeat=false { toggle-overview; }
 }

@@ -1,11 +1,14 @@
 # macOS-style shortcuts, surgically — everything unmapped passes through to niri.
 # Combo note: the Wooting 60HE is remapped so the key next to space (Mac Command
 # position) sends Super, and the one beside it (Mac Option position) sends Alt.
+# Commented-out rules: Mac-style shortcuts given up for niri's Mod+W/A/S/D, Mod+C
+# and Mod+V. Uncomment one to bring it back; xremap takes the key before niri sees
+# it. The pre-WASD niri and xremap config is at git tag niri-before-wasd.
 
 keymap:
   # ─── Browser: Mac-style tab shortcuts ───
   - name: mac-style browser
-    exact_match: true # Super-Shift-s etc. pass through to niri instead of matching Super-s
+    exact_match: true # Super-Shift-c etc. pass through to niri instead of matching Super-c
     application:
       only: [helium, firefox]
     remap:
@@ -18,11 +21,11 @@ keymap:
     application:
       not: [com.mitchellh.ghostty]
     remap:
-      Super-a: Ctrl-a             # select all
+      # Super-a: Ctrl-a           # select all (niri: Mod+A focuses left)
       # Super-c: Ctrl-c           # copy (niri: Mod+C centers the window)
       # Super-v: Ctrl-v           # paste (niri: Mod+V floats the window)
-      Super-w: Ctrl-w             # close tab
-      Super-s: Ctrl-s             # save
+      # Super-w: Ctrl-w           # close tab (niri: Mod+W focuses up)
+      # Super-s: Ctrl-s           # save (niri: Mod+S focuses down)
       Alt-BackSpace: Ctrl-BackSpace              # delete word back
       Super-BackSpace: [Shift-Home, BackSpace]   # delete to line start
 
@@ -32,9 +35,9 @@ keymap:
     application:
       only: [com.mitchellh.ghostty]
     remap:
-      Super-a: Ctrl-Shift-a       # ghostty: select_all
+      # Super-a: Ctrl-Shift-a     # ghostty: select_all (niri: Mod+A focuses left)
       # Super-c: Ctrl-Shift-c     # ghostty: copy (niri: Mod+C centers the window)
       # Super-v: Ctrl-Shift-v     # ghostty: paste (niri: Mod+V floats the window)
-      Super-w: Ctrl-w             # ghostty: close_tab
+      # Super-w: Ctrl-w           # ghostty: close_tab (niri: Mod+W focuses up)
       Super-BackSpace: Ctrl-u     # shell: delete to line start
       # Alt-BackSpace passes through: readline's native delete word back
