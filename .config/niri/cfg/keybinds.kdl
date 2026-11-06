@@ -40,6 +40,7 @@ binds {
     XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
     XF86AudioMute                       allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
     XF86AudioMicMute                    allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+    Mod+M                               allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
     XF86AudioNext                       allow-when-locked=true { spawn-sh "noctalia msg media next"; }
     XF86AudioPrev                       allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
     XF86AudioPlay                       allow-when-locked=true { spawn-sh "noctalia msg media play"; }
@@ -171,7 +172,7 @@ binds {
     Mod+F                               { maximize-column; }
     Mod+Shift+F                         { fullscreen-window; }
     Mod+Y                               { toggle-column-tabbed-display; }
-    Mod+M                               { maximize-window-to-edges; }
+    Mod+Shift+M                         { maximize-window-to-edges; }
 
     // ─── Screenshots ───
     CTRL+Shift+1                        { screenshot; }
