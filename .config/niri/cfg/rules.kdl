@@ -67,6 +67,13 @@
         open-floating true
     }
 
+    window-rule {
+        match app-id="^org\\.gnome\\.Nautilus$"
+        open-floating true
+        default-column-width { fixed 1200; }
+        default-window-height { fixed 800; }
+    }
+
     // if you use steam you will probably like these
     window-rule {
         match app-id="steam"
