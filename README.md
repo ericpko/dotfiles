@@ -208,6 +208,19 @@ nmcli connection up "<wifi name>"
 With a new router, re-pin using its BSSID once connected. Keep the Wi-Fi name and
 BSSID out of this public repo.
 
+Bluetooth audio out of sync with video (Shokz OpenFit 2+, AAC): PipeWire tells
+apps the earbuds add no delay, so browsers don't hold the video back. A latency
+offset on the earbuds' output fixes it; 164 ms is right for the OpenFit 2+.
+WirePlumber saves it in `~/.local/state/wireplumber/default-routes`, so it
+survives reconnects and reboots, but a reinstall or new earbuds need it set again.
+```bash
+pactl list cards short          # find the earbuds' bluez_card.XX_XX_XX_XX_XX_XX
+pactl set-port-latency-offset bluez_card.<address> headset-output 164000   # microseconds
+```
+To tune it, play an "audio video sync test" on YouTube: raise the offset if the
+beep comes after the flash, lower it if it comes before. Keep the Bluetooth
+address out of this public repo.
+
 [Awesome niri](https://github.com/Vortriz/awesome-niri)
 - fix ghostty terminfo
   - this might be fixed in Linux by default in the future
