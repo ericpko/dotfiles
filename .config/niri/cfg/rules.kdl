@@ -20,6 +20,7 @@
     window-rule {
         match app-id="^com\\.anthropic\\.Claude$"
         match app-id="^grok-bot$"
+        match app-id="^sidra$"
         open-on-workspace "3"
     }
 
