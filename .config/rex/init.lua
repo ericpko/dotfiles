@@ -3,6 +3,8 @@ local hyper = "cmd+ctrl+alt+"
 -- Tabs
 rex.bind(hyper .. "h", "client.tab.previous")
 rex.bind(hyper .. "l", "client.tab.next")
+rex.bind(hyper .. "k", "client.tab.previous")
+rex.bind(hyper .. "j", "client.tab.next")
 for i = 1, 9 do
   rex.bind(hyper .. i, "client.tab.goto", { index = i })
 end
