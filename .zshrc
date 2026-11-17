@@ -8,6 +8,7 @@ export PATH="$PATH:$HOME/.bun/bin"
 # Homebrew BEFORE other paths (macOS)
 if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/opt/homebrew/bin:$PATH"
+  export HOMEBREW_NO_ENV_HINTS=1
 fi
 
 # ZVM (Zig version manager)
@@ -146,6 +147,9 @@ up() {
     # run_or_exit sprite upgrade --force
     # run_or_exit zvm i --zls master
     # run_or_exit zvm clean
+
+    # Keep last: restarts the shell if oh-my-zsh changed
+    run_or_exit omz update
 }
 
 # usage `bre ex_file_name`
